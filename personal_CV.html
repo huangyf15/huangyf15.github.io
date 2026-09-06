@@ -1,44 +1,176 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <title>Yunfan's profile</title>
-    <style>
-      body {
-        font-family:'Times New Roman'; font-size:10.5pt; text-align:justify;
-        line-height:150%; orphans:0; widows:0;
-      }
-      ul, ol {margin:5pt; padding-left:0pt;}
-      li {
-        margin:5pt 0pt 0pt 11.75pt; padding-left:2.45pt;
-      }
-      #img {
-        float:left; margin:0pt 10.5pt; -aw-left-pos:0.25pt; -aw-top-pos:2.1pt;
-        -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-wrap-type:square;
-      }
-      #title-para1 {line-height:150%; font-size:14pt; font-weight:bold;}
-      #title-para2 {line-height:125%; font-size:13pt; font-weight:bold;}
-      .heading1 {font-size:13pt; font-weight:bold; text-decoration:underline; margin:5pt;}
-      .heading2 {font-size:11pt; font-weight:bold; font-style:italic; margin:5pt;}
-      .break {font-size:7.0pt; margin: 0pt}
-    </style>
-  </head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yunfan Huang · Personal CV</title>
+<meta name="author" content="Yunfan Huang">
+<style>
+:root {
+  --bg-page: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F4F2EC;
+  --border-soft: rgba(28,30,34,0.08);
+  --border-medium: rgba(28,30,34,0.16);
+  --text-1: #1F2024;
+  --text-2: #4F4E4A;
+  --text-3: #8A8983;
+  --accent: #185FA5;
+  --accent-dark: #0C447C;
+  --accent-soft: #E6F1FB;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --maxw: 940px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-1);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-dark); }
 
-  <body>
+.topnav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,250,247,0.86);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border-soft);
+}
+.topnav-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 12px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 500; font-size: 14px; color: var(--text-1);
+}
+.brand-mark {
+  width: 28px; height: 28px;
+  background: var(--accent); color: white;
+  border-radius: 8px;
+  display: grid; place-items: center;
+  font-weight: 500; font-size: 14px;
+}
+.nav-links { display: flex; gap: 2px; font-size: 13px; }
+.nav-links a {
+  color: var(--text-2);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+}
+.nav-links a:hover { background: var(--bg-subtle); color: var(--text-1); }
+.lang-switch {
+  display: flex; font-size: 12px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.lang-switch a { padding: 4px 10px; color: var(--text-3); }
+.lang-switch a.active { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
 
-    <p class="heading1">Personal CV (till 2026.06)</p>
-    <p style="line-height:100%"><embed src="./files/CV_huangyf_202606.pdf" type="application/pdf"  width="100%" height="1000px"/></a></p>
-    
-    <p class="break">&#xa0;</p>
-    <p class="heading1">Statistics</p>
-    <script src="(()=>{if(window.busuanziRequestSent)return;window.busuanziRequestSent=true;const u=new URL(document.currentScript.src);fetch(u.protocol+'//'+u.host+'/api.php',{method:'POST',body:JSON.stringify({url:location.href,referrer:document.referrer})}).then(r=>r.json()).then(r=>{for(const k in r)document.querySelectorAll('#'+k).forEach(e=>e.innerText=r[k])}).catch(e=>console.error(e))})()" defer></script>
-    <link rel="stylesheet" href="https://cdn.coolcdn.cn/static/font-awesome/7.0.0/css/all.min.css">
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
-        <ul type = "circle">
-          <li>本页总阅读量 <span id="busuanzi_page_pv"><i class="fa fa-spinner fa-spin"></i></span> 次；本页总访客数 <span id="busuanzi_page_uv"><i class="fa fa-spinner fa-spin"></i></span> 人</li>
-        </ul>
+.cv-head { padding: 36px 0 20px; }
+.cv-head h1 {
+  margin: 0;
+  font-size: 24px; font-weight: 500;
+  letter-spacing: -0.3px;
+}
+.cv-head .meta {
+  margin: 6px 0 0;
+  color: var(--text-3);
+  font-size: 13px;
+}
 
-  </body>
+.cv-embed-wrap { padding: 0 0 32px; }
+.embed-frame {
+  width: 100%;
+  height: calc(100vh - 240px);
+  min-height: 640px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+}
 
+.site-footer {
+  border-top: 1px solid var(--border-soft);
+  background: var(--bg-card);
+  padding: 24px 0 32px;
+}
+.stats-row {
+  display: flex; gap: 18px; flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--text-2);
+  align-items: center;
+}
+.stats-row .idx { color: var(--text-3); margin-right: 4px; }
+.copyright {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+@media (max-width: 760px) {
+  .container { padding: 0 16px; }
+  .embed-frame { height: 80vh; min-height: 480px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">Y</span>
+      <span>Yunfan Huang</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index_zh.html">中文主页</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="index.html">EN</a>
+      <a href="index_zh.html">中</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="cv-head">
+    <h1>Personal CV / 个人简历</h1>
+    <p class="meta">Updated till 2026.06 · <a href="./files/CV_huangyf_202606.pdf" target="_blank" rel="noopener">Open PDF in new tab / 新标签页打开</a></p>
+  </div>
+  <div class="cv-embed-wrap">
+    <embed class="embed-frame" src="./files/CV_huangyf_202606.pdf" type="application/pdf">
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="stats-row">
+      <span><span class="idx">总访问量 · Total PV</span><span id="vercount_value_site_pv">···</span></span>
+      <span><span class="idx">总访客数 · Total UV</span><span id="vercount_value_site_uv">···</span></span>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Yunfan Huang · Hosted on GitHub Pages
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+var y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>

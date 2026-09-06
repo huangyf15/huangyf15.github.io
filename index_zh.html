@@ -1,212 +1,1106 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <title>Yunfan's profile</title>
-    <style>
-      body {
-        font-family:'Times New Roman'; font-size:10.5pt; text-align:justify;
-        line-height:150%; orphans:0; widows:0;
-      }
-      ul, ol {margin:5pt; padding-left:0pt;}
-      li {
-        margin:5pt 0pt 0pt 11.75pt; padding-left:2.45pt;
-      }
-      #img {
-        float:left; margin:0pt 10.5pt; -aw-left-pos:0.25pt; -aw-top-pos:2.1pt;
-        -aw-rel-hpos:column; -aw-rel-vpos:paragraph; -aw-wrap-type:square;
-      }
-      #title-para1 {line-height:150%; font-size:14pt; font-weight:bold;}
-      #title-para2 {line-height:125%; font-size:13pt; font-weight:bold;}
-      .heading1 {font-size:13pt; font-weight:bold; text-decoration:underline; margin:5pt;}
-      .heading2 {font-size:11pt; font-weight:bold; font-style:italic; margin:5pt;}
-      .break {font-size:7.0pt; margin: 0pt}
-      .list-style-1 {
-        list-style-type: square;
-        margin: 5pt; 
-        padding-left: 20pt;
-      }
-      .list-style-2 {
-        list-style-type: circle;
-        margin: 5pt; 
-        padding-left: 20pt;
-      }
-    </style>
-  </head>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄云帆 · Yunfan Huang — 个人主页</title>
+<meta name="description" content="黄云帆 (Yunfan Huang)，清华大学工程力学系博士。研究方向：液-液界面的电动输运机理与多尺度建模。">
+<meta name="author" content="黄云帆">
+<link rel="icon" href="figs/photo.jpg" type="image/jpeg">
+<style>
+:root {
+  --bg-page: #FAFAF7;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F4F2EC;
+  --border-soft: rgba(28,30,34,0.08);
+  --border-medium: rgba(28,30,34,0.16);
+  --text-1: #1F2024;
+  --text-2: #4F4E4A;
+  --text-3: #8A8983;
+  --accent: #185FA5;
+  --accent-dark: #0C447C;
+  --accent-soft: #E6F1FB;
+  --tag-PCH-bg: #E1F5EE; --tag-PCH-fg: #085041;
+  --tag-QH-bg:  #E6F1FB; --tag-QH-fg:  #0C447C;
+  --tag-AM-bg:  #FAEEDA; --tag-AM-fg:  #633806;
+  --tag-CF-bg:  #FBEAF0; --tag-CF-fg:  #72243E;
+  --tag-MS-bg:  #EEEDFE; --tag-MS-fg:  #3C3489;
+  --highlight-bg: #FAEEDA;
+  --highlight-fg: #854F0B;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --maxw: 940px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-serif: ui-serif, Georgia, "Times New Roman", "Songti SC", serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-1);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: var(--accent); text-decoration: none; transition: color .15s; }
+a:hover { color: var(--accent-dark); text-decoration: underline; }
 
-  <body>
-    
-    <img src="figs/photo.jpg" width="200" height="250" alt="selfie" id="img"/>
-    <p id="title-para1"><span style="font-family:楷体">黄云帆</span> Yunfan Huang</p>
-    <p id="title-para2">Ph.D.</p>
-    <p class="break">&#xa0;</p>
-    <p class="break">&#xa0;</p>
-    <p style="line-height:100%">To:<a href="index.html"><u> English Version</u></a></p>
-    <p style="line-height:100%"><a href="personal_CV.html"><u>个人简历</u></a></p>
-    <p style="line-height:100%"><b>电子邮箱</b>: <a style="color:black" href="mailto:yf-huang19@mails.tsinghua.edu.cn">yf-huang19@tsinghua.org.cn</a></p>
-    <p style="line-height:100%"><b>个人主页</b>: <a href="https://www.researchgate.net/profile/Yunfan-Huang?ev=hdr_xprf"><u>ResearchGate</u></a>, <a href="https://scholar.google.com/citations?user=uXD8AFoAAAAJ&hl=en&oi=ao"><u>Google Scholar</u></a> </p>
-    <p class="break">&#xa0;</p>
-    <p class="break">&#xa0;</p>
+/* ============ TOP NAV ============ */
+.topnav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,250,247,0.86);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border-soft);
+}
+.topnav-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 12px 24px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 500; font-size: 14px; color: var(--text-1);
+  letter-spacing: 0.2px;
+}
+.brand-mark {
+  width: 28px; height: 28px;
+  background: var(--accent); color: white;
+  border-radius: 8px;
+  display: grid; place-items: center;
+  font-weight: 500; font-size: 14px;
+}
+.nav-links { display: flex; gap: 2px; font-size: 13px; }
+.nav-links a {
+  color: var(--text-2);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: background .15s, color .15s;
+}
+.nav-links a:hover { background: var(--bg-subtle); color: var(--text-1); text-decoration: none; }
+.lang-switch {
+  display: flex; font-size: 12px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.lang-switch a { padding: 4px 10px; color: var(--text-3); }
+.lang-switch a.active { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
 
-    <p class="heading1">教育经历</p>
-      <ul>
-        <li><b>博士/工学 (2019-2025)</b>
-          <ul style="padding-left:2pt">
-            <li>工程力学系，清华大学</li>
-            <li><b>导师</b>：王沫然教授</li>
-            <li><b>论文</b>：液-液不混溶两相界面电动输运的机理研究 <a href="files/thesis/Dissertation_0_Doctor_EKmHD_online.pdf">📙</a></li>
-          </ul>
-        </li>
-        <li><b>本科/工学 (2015-2019)</b>
-          <ul style="padding-left:2pt">
-            <li>工程力学（钱学森力学班），清华大学</li>
-            <li><b>导师</b>：王沫然教授</li>
-            <li><b>论文</b>：微纳尺度低维电子输运的水动力学研究 <a href="files/thesis/Thesis_1_Undergrad_eMHD_online.pdf">📘</a> / <a href="files/thesis/Thesis_2_Undergrad_eMHD_supp_online.pdf">📑</a></li>
-          </ul>
-        </li>
-      </ul>
+/* ============ CONTAINER ============ */
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
-    <p style="line-height:100%"></a>&#xa0;&#xa0;&#xa0;&#xa0;<b>泛教育经历</b></p>
-      <ul class="list-style-1">
-        <li><i>Fall 2021-2023</i>：助教</li>
-        <ul class="list-style-2">
-          <li>传热学（英），王沫然教授，清华大学</li>
+/* ============ HERO ============ */
+.hero {
+  display: grid; grid-template-columns: 200px 1fr;
+  gap: 36px;
+  padding: 48px 0 40px;
+  align-items: start;
+}
+.photo-frame {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 8px;
+}
+.photo-frame img {
+  width: 100%; height: auto; display: block; border-radius: 4px;
+}
+.photo-meta {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 0.4px;
+}
+.bio h1 {
+  margin: 0;
+  font-size: 32px; font-weight: 500;
+  letter-spacing: -0.5px; line-height: 1.2;
+}
+.bio .en-name {
+  font-size: 18px; color: var(--text-2); font-weight: 400;
+  margin-left: 10px;
+}
+.bio .title-line {
+  margin: 8px 0 18px;
+  color: var(--accent);
+  font-size: 14px; font-weight: 500;
+  letter-spacing: 0.2px;
+}
+.bio .tagline {
+  margin: 0 0 24px;
+  font-size: 15px; line-height: 1.8;
+  color: var(--text-2);
+  max-width: 580px;
+}
+.contact-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  color: var(--text-1);
+  padding: 6px 13px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  transition: border-color .15s, background .15s, color .15s;
+}
+.chip:hover {
+  border-color: var(--border-medium);
+  background: var(--bg-subtle);
+  text-decoration: none;
+  color: var(--text-1);
+}
+.disc-pills {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin: -10px 0 24px;
+}
+.disc {
+  font-size: 11.5px; font-weight: 500;
+  color: var(--text-2);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-soft);
+  padding: 3px 11px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+}
+
+/* ============ SECTIONS ============ */
+.section { padding: 40px 0; border-top: 1px solid var(--border-soft); }
+.section h2 {
+  margin: 0 0 6px;
+  font-size: 22px; font-weight: 500;
+  letter-spacing: 0.1px;
+}
+.section-lead {
+  margin: 0 0 26px;
+  color: var(--text-2); font-size: 14px;
+  max-width: 640px;
+}
+.subsection-title {
+  margin: 32px 0 14px;
+  font-size: 11px; font-weight: 500;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.subsection-title:first-of-type { margin-top: 16px; }
+
+/* ============ RESEARCH GRID ============ */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 10px;
+}
+.research-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  transition: border-color .15s;
+}
+.research-card:hover { border-color: var(--border-medium); }
+.research-card[data-tag="PCH"] { border-left-color: var(--tag-PCH-fg); }
+.research-card[data-tag="QH"]  { border-left-color: var(--tag-QH-fg); }
+.research-card[data-tag="AM"]  { border-left-color: var(--tag-AM-fg); }
+.research-card[data-tag="CF"]  { border-left-color: var(--tag-CF-fg); }
+.research-card[data-tag="MS"]  { border-left-color: var(--tag-MS-fg); }
+.research-card .tag-label {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 1.4px;
+  margin-bottom: 6px;
+}
+.research-card[data-tag="PCH"] .tag-label { color: var(--tag-PCH-fg); }
+.research-card[data-tag="QH"]  .tag-label { color: var(--tag-QH-fg); }
+.research-card[data-tag="AM"]  .tag-label { color: var(--tag-AM-fg); }
+.research-card[data-tag="CF"]  .tag-label { color: var(--tag-CF-fg); }
+.research-card[data-tag="MS"]  .tag-label { color: var(--tag-MS-fg); }
+.research-card .tag-full {
+  font-size: 13px; color: var(--text-1); line-height: 1.6;
+}
+
+/* ============ TIMELINE ============ */
+.timeline {
+  position: relative;
+  padding-left: 22px;
+  margin: 0 0 32px;
+}
+.timeline::before {
+  content: ""; position: absolute;
+  left: 4px; top: 6px; bottom: 6px;
+  width: 1px; background: var(--border-medium);
+}
+.timeline-item { position: relative; padding: 0 0 22px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+  content: ""; position: absolute;
+  left: -22px; top: 8px;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg-page);
+}
+.timeline-item.muted::before { background: var(--text-3); }
+.timeline-year {
+  font-size: 12px; color: var(--text-3);
+  letter-spacing: 0.5px; margin-bottom: 2px;
+  font-variant-numeric: tabular-nums;
+}
+.timeline-title {
+  font-size: 15px; font-weight: 500;
+  margin-bottom: 4px; color: var(--text-1);
+}
+.timeline-detail {
+  font-size: 13.5px; color: var(--text-2); line-height: 1.7;
+}
+
+/* ============ HONORS ============ */
+.honors-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr; gap: 6px;
+}
+.honor-item {
+  display: grid; grid-template-columns: 92px 1fr;
+  gap: 16px;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+}
+.honor-year {
+  color: var(--text-3); font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============ PORTFOLIO ============ */
+.portfolio-block {
+  margin-top: 32px;
+  padding: 18px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+}
+.portfolio-block h4 {
+  margin: 0 0 12px;
+  font-size: 11px; font-weight: 500;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.portfolio-group { margin-bottom: 14px; }
+.portfolio-group:last-child { margin-bottom: 0; }
+.portfolio-group .group-title {
+  display: block;
+  margin: 0 0 4px;
+  font-size: 13px; font-weight: 500; font-style: italic;
+  color: var(--text-2);
+}
+.portfolio-list {
+  list-style: none; margin: 0; padding: 0;
+}
+.portfolio-list li {
+  padding: 5px 0;
+  font-size: 13.5px;
+  color: var(--text-1);
+  display: flex; gap: 10px; align-items: baseline;
+}
+.portfolio-list .port-date {
+  font-size: 11px; color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+  min-width: 64px;
+}
+
+/* ============ SERVICES ============ */
+.services {
+  margin-top: 18px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  font-size: 13.5px; color: var(--text-2);
+}
+.services h4 {
+  margin: 0 0 6px;
+  font-size: 11px; font-weight: 500;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============ PUBLICATION FILTERS ============ */
+.pub-filters {
+  display: flex; flex-wrap: wrap;
+  gap: 6px;
+  margin: 18px 0 26px;
+}
+.filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  color: var(--text-2);
+  font-family: inherit;
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.4px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .15s;
+}
+.filter-btn:hover { border-color: var(--border-medium); color: var(--text-1); }
+.filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+.filter-btn[data-tag="PCH"].active { background: var(--tag-PCH-fg); border-color: var(--tag-PCH-fg); }
+.filter-btn[data-tag="QH"].active  { background: var(--tag-QH-fg);  border-color: var(--tag-QH-fg); }
+.filter-btn[data-tag="AM"].active  { background: var(--tag-AM-fg);  border-color: var(--tag-AM-fg); }
+.filter-btn[data-tag="CF"].active  { background: var(--tag-CF-fg);  border-color: var(--tag-CF-fg); }
+.filter-btn[data-tag="MS"].active  { background: var(--tag-MS-fg);  border-color: var(--tag-MS-fg); }
+
+/* ============ PUBLICATION CARDS ============ */
+.pub-list { display: flex; flex-direction: column; gap: 8px; }
+.pub-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: start;
+  transition: border-color .15s;
+}
+.pub-card:hover { border-color: var(--border-medium); }
+.pub-card.hidden { display: none; }
+.pub-meta {
+  display: flex; gap: 6px; flex-wrap: wrap; align-items: center;
+  margin-bottom: 8px;
+  grid-column: 1 / -1;
+}
+.tag {
+  font-size: 10.5px; font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.6px;
+}
+.tag-PCH { background: var(--tag-PCH-bg); color: var(--tag-PCH-fg); }
+.tag-QH  { background: var(--tag-QH-bg);  color: var(--tag-QH-fg); }
+.tag-AM  { background: var(--tag-AM-bg);  color: var(--tag-AM-fg); }
+.tag-CF  { background: var(--tag-CF-bg);  color: var(--tag-CF-fg); }
+.tag-MS  { background: var(--tag-MS-bg);  color: var(--tag-MS-fg); }
+.tag-extra { background: var(--bg-subtle); color: var(--text-2); }
+.tag-highlight { background: var(--highlight-bg); color: var(--highlight-fg); }
+.tag-cn { background: transparent; color: var(--text-3); border: 1px solid var(--border-soft); }
+.pub-year {
+  font-size: 12px; color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+.pub-title {
+  margin: 0 0 6px;
+  font-size: 14.5px; font-weight: 500;
+  line-height: 1.55;
+  color: var(--text-1);
+}
+.pub-title a { color: inherit; }
+.pub-title a:hover { color: var(--accent); }
+.pub-authors {
+  margin: 0 0 4px;
+  font-size: 12.5px;
+  color: var(--text-2);
+  font-style: italic;
+}
+.pub-journal {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-3);
+}
+.pub-journal em { font-style: italic; }
+.pub-journal b { font-weight: 500; color: var(--text-2); }
+
+/* ============ FOOTER ============ */
+.site-footer {
+  margin-top: 60px;
+  padding: 28px 0 36px;
+  border-top: 1px solid var(--border-soft);
+  background: var(--bg-card);
+}
+.stats-row {
+  display: flex; gap: 18px; flex-wrap: wrap;
+  font-size: 12.5px;
+  color: var(--text-2);
+  align-items: center;
+}
+.stats-row .idx { color: var(--text-3); margin-right: 4px; }
+.copyright {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+/* ============ BACK TO TOP ============ */
+.back-to-top {
+  position: fixed;
+  right: 24px; bottom: 24px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  color: var(--text-2);
+  display: grid; place-items: center;
+  font-size: 16px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .2s, transform .2s, color .15s, border-color .15s;
+  pointer-events: none;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 760px) {
+  .topnav-inner { padding: 10px 16px; }
+  .container { padding: 0 16px; }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 28px 0 24px;
+    text-align: center;
+  }
+  .photo-frame { max-width: 160px; margin: 0 auto; }
+  .bio h1 { font-size: 26px; }
+  .bio .en-name { display: block; margin-left: 0; margin-top: 4px; font-size: 16px; }
+  .bio .tagline { margin-left: auto; margin-right: auto; }
+  .contact-chips { justify-content: center; }
+  .section { padding: 32px 0; }
+  .section h2 { font-size: 20px; }
+  .research-grid { grid-template-columns: 1fr 1fr; }
+  .honor-item { grid-template-columns: 76px 1fr; padding: 9px 12px; }
+  .pub-card { grid-template-columns: 1fr; }
+  .pub-year { padding-top: 0; }
+  .pub-meta { grid-column: 1; }
+}
+@media (max-width: 440px) {
+  .research-grid { grid-template-columns: 1fr; }
+  .nav-links { font-size: 12px; }
+}
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="topnav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">黄</span>
+      <span>黄云帆</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#research">研究兴趣</a>
+      <a href="#education">教育经历</a>
+      <a href="#publications">发表列表</a>
+      <a href="personal_CV.html">个人简历</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="index.html">EN</a>
+      <a href="index_zh.html" class="active">中</a>
+    </div>
+  </div>
+</header>
+
+<main class="container" id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div>
+      <div class="photo-frame">
+        <img src="figs/photo.jpg" alt="黄云帆" width="200" height="250">
+      </div>
+      <p class="photo-meta">博士 · 清华大学 · 2025</p>
+    </div>
+    <div class="bio">
+      <h1>黄云帆<span class="en-name">Yunfan Huang</span></h1>
+      <p class="title-line">博士 · 工程力学系 · 清华大学</p>
+      <p class="tagline">
+        研究兴趣聚焦于微纳尺度上跨学科的多物理水动力学输运，涵盖物理化学流体力学与电子流体力学。典型体系包括电解质溶液界面的电动现象，以及二维纯导体中的电子流体力学。研究兼取动理学理论与多尺度建模的视角，必要时辅以模拟和/或实验
+      </p>
+      <div class="disc-pills">
+        <span class="disc">Mechanics</span>
+        <span class="disc">Condensed Matter Physics</span>
+        <span class="disc">Computational Physics</span>
+        <span class="disc">Mechanical Engineering</span>
+        <span class="disc">Chemical Engineering</span>
+      </div>
+      <div class="contact-chips">
+        <a class="chip" href="mailto:yf-huang19@tsinghua.org.cn">yf-huang19@tsinghua.org.cn</a>
+        <a class="chip" href="https://scholar.google.com/citations?user=uXD8AFoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="chip" href="https://www.researchgate.net/profile/Yunfan-Huang" target="_blank" rel="noopener">ResearchGate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH ===================== -->
+  <section id="research" class="section">
+    <h2>研究兴趣</h2>
+    <p class="section-lead">
+      围绕「多物理水动力学输运在多尺度上的协同」这一主题，沿五条方向展开
+    </p>
+
+    <div class="research-grid">
+      <div class="research-card" data-tag="PCH">
+        <div class="tag-label">PCH</div>
+        <div class="tag-full">微纳尺度的物理化学流体力学（如电动输运）</div>
+      </div>
+      <div class="research-card" data-tag="QH">
+        <div class="tag-label">QH</div>
+        <div class="tag-full">固体体系的量子流体力学（如电子、声子）</div>
+      </div>
+      <div class="research-card" data-tag="AM">
+        <div class="tag-label">AM</div>
+        <div class="tag-full">多相固体介质中的原子输运（如电迁移、热迁移）</div>
+      </div>
+      <div class="research-card" data-tag="CF">
+        <div class="tag-label">CF</div>
+        <div class="tag-full">多孔介质中的复杂流动（如颗粒、乳液）</div>
+      </div>
+      <div class="research-card" data-tag="MS">
+        <div class="tag-label">MS</div>
+        <div class="tag-full">多物理水动力学输运的建模与模拟（动理学与多尺度视角）</div>
+      </div>
+    </div>
+
+    <div class="services">
+      <h4>学术服务</h4>
+      担任审稿人：<i>Journal of Colloid and Interface Science</i></div>
+
+    <div class="portfolio-block">
+      <h4>泛学术作品</h4>
+      <div class="portfolio-group">
+        <span class="group-title">物理图景</span>
+        <ul class="portfolio-list">
+          <li><span class="port-date">2025·02</span><span>电动多相流体力学：框架概述 <a href="./files/portfolios/Phys_1_EKmHD_overview_202502.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+          <li><span class="port-date">2025·04</span><span>复杂流体力学：从单一范式到交叉范式 <a href="./files/portfolios/Phys_2_Complex_hydrodyn_202504.pdf" target="_blank" rel="noopener">PDF</a></span></li>
         </ul>
-        <li><i>Fall 2018</i>：访问学生</li>
-        <ul class="list-style-2">
-          <li>机械工程系，S.T. Wereley 教授，普渡大学 (Purdue University)</li>
+      </div>
+      <div class="portfolio-group">
+        <span class="group-title">学术人物</span>
+        <ul class="portfolio-list">
+          <li><span class="port-date">2016·11</span><span>学术之道：走近丘成桐先生 <a href="./files/portfolios/Fig_1_Shing-Tung_Yau_201611.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+          <li><span class="port-date">2023·12</span><span>拉尔斯·昂萨格：一场围绕对称性与结构的人生旅程 <a href="./files/portfolios/Fig_2_Lars_Onsager_202312.pdf" target="_blank" rel="noopener">PDF</a></span></li>
         </ul>
-        <li><i>July 2018</i>：营员</li>
-        <ul class="list-style-2">
-          <li>空客创新夏令营 (1/40)，克兰菲尔德大学 (Cranfield University)</li>
+      </div>
+      <div class="portfolio-group">
+        <span class="group-title">科普介绍</span>
+        <ul class="portfolio-list">
+          <li><span class="port-date">2024·01</span><span>传质学引论（课程章节讲义） <a href="./files/portfolios/Post_1_Mass_transfer_tutorial_202401.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+          <li><span class="port-date">2024·11</span><span>渗透压的历史回顾（点科普） <a href="./files/portfolios/Post_2_Osmotic_pressure_202411.pdf" target="_blank" rel="noopener">PDF</a></span></li>
+          <li><span class="port-date">2024·12</span><span>液-液界面的电动输运（论文推送） <a href="./files/portfolios/Post_3_EKmHD_ITIES_overview_202412.pdf" target="_blank" rel="noopener">PDF</a></span></li>
         </ul>
-      </ul>
-    
+      </div>
+    </div>
+  </section>
 
-    <p style="line-height:100%"></a>&#xa0;&#xa0;&#xa0;&#xa0;<b>荣誉奖励</b></p> 
-      <ul class="list-style-1">
-        <li>2025.06<span>&#xa0;&#xa0;</span>北京市优秀毕业生（博士）</li>
-        <li>2021.12<span>&#xa0;&#xa0;</span>清华大学研究生综合优秀奖一等奖（唐立新奖）</li>
-        <li>2019.07<span>&#xa0;&#xa0;</span>清华大学博士生“未来学者奖学金”</li>
-        <li>2019.07<span>&#xa0;&#xa0;</span>北京市普通高校优秀本科生毕业设计（论文）</li>
-        <li>2019.07<span>&#xa0;&#xa0;</span>清华大学本科生综合论文训练优秀论文</li>
-        <li>2019.07<span>&#xa0;&#xa0;</span>清华大学优良毕业生（本科）</li>
-        <li>2016.10<span>&#xa0;&#xa0;</span>国家奖学金</li>
-        <li>2015.10<span>&#xa0;&#xa0;</span>清华大学“拔尖创新人才培养计划”学堂班奖学金</li>
-      </ul>
-    <p class="break">&#xa0;</p>
+  <!-- ===================== EDUCATION & EXPERIENCE ===================== -->
+  <section id="education" class="section">
+    <h2>教育经历</h2>
 
-    <p class="heading1">研究兴趣</p>
-      <ul>
-        <li>PCH：微纳尺度的物理化学流体力学（如电动输运）</li>
-        <li>QH：固体体系的量子流体力学（如电子、声子）</li>
-        <li>AM：多相固体介质中的原子输运（如电迁移、热迁移）</li>
-        <li>CF：多孔介质中的复杂流动（如颗粒、乳液）</li>
-        <li>MS：多物理输运的建模与模拟（如动理学、多尺度视角）</li>
-      </ul>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2019 — 2025</div>
+        <div class="timeline-title">博士 / 工学 · 工程力学系，清华大学</div>
+        <div class="timeline-detail">
+          <b>导师</b>：王沫然教授<br>
+          <b>论文</b>：液-液不混溶两相界面电动输运的机理研究 <a href="files/thesis/Dissertation_0_Doctor_EKmHD_online.pdf" target="_blank" rel="noopener">PDF</a>
+        </div>
+      </div>
+      <div class="timeline-item muted">
+        <div class="timeline-year">2015 — 2019</div>
+        <div class="timeline-title">本科 / 工学 · 工程力学（钱学森力学班），清华大学</div>
+        <div class="timeline-detail">
+          <b>导师</b>：王沫然教授<br>
+          <b>论文</b>：微纳尺度低维电子输运的水动力学研究
+          <a href="files/thesis/Thesis_1_Undergrad_eMHD_online.pdf" target="_blank" rel="noopener">主文档 PDF</a> /
+          <a href="files/thesis/Thesis_2_Undergrad_eMHD_supp_online.pdf" target="_blank" rel="noopener">补充材料</a>
+        </div>
+      </div>
+    </div>
 
-    <p style="line-height:100%"></a>&#xa0;&#xa0;&#xa0;&#xa0;<b>学术服务</b></p>
-      <ul class="list-style-1">
-        <li>担任审稿人：<i>Journal of Colloid and Interface Science</i></li>
-      </ul>
+    <h3 class="subsection-title">泛教育经历</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2021 — 2023 秋</div>
+        <div class="timeline-title">助教 · 传热学（英）</div>
+        <div class="timeline-detail">王沫然教授，清华大学</div>
+      </div>
+      <div class="timeline-item muted">
+        <div class="timeline-year">2018 秋</div>
+        <div class="timeline-title">访问学生 · 机械工程系</div>
+        <div class="timeline-detail">S.T. Wereley 教授，普渡大学（Purdue University）</div>
+      </div>
+      <div class="timeline-item muted">
+        <div class="timeline-year">2018·07</div>
+        <div class="timeline-title">营员 · 空客创新夏令营</div>
+        <div class="timeline-detail">从众多申请者中入选 40 人，克兰菲尔德大学（Cranfield University）</div>
+      </div>
+    </div>
 
-    <p style="line-height:100%"></a>&#xa0;&#xa0;&#xa0;&#xa0;<b>泛学术作品</b></p>
-      <ul class="list-style-1">
-        <li>物理图景</li>
-        <ul class="list-style-2">
-          <li>(202502) 电动多相流体力学：框架概述 <a href="./files/portfolios/Phys_1_EKmHD_overview_202502.pdf">🗞️</a></li>
-          <li>(202504) 复杂流体力学：从单一范式到交叉范式 <a href="./files/portfolios/Phys_2_Complex_hydrodyn_202504.pdf">🗞️</a></li>
-        </ul>
-        <li>学术人物</li>
-        <ul class="list-style-2">
-          <li>(201611) 学术之道：走近丘成桐先生 <a href="./files/portfolios/Fig_1_Shing-Tung_Yau_201611.pdf">🗞️</a></li>
-          <li>(202312) 拉尔斯·昂萨格：一场围绕对称性与结构的人生旅程 <a href="./files/portfolios/Fig_2_Lars_Onsager_202312.pdf">🗞️</a></li>
-        </ul>
-        <li>科普介绍</li>
-        <ul class="list-style-2">          
-          <li>(202401) 传质学引论（课程章节讲义） <a href="./files/portfolios/Post_1_Mass_transfer_tutorial_202401.pdf">🗞️</a></li>
-          <li>(202411) 渗透压的历史回顾（点科普） <a href="./files/portfolios/Post_2_Osmotic_pressure_202411.pdf">🗞️</a></li>
-          <li>(202412) 液-液界面的电动输运（论文推送） <a href="./files/portfolios/Post_3_EKmHD_ITIES_overview_202412.pdf">🗞️</a></li>
-        </ul>
-      </ul>
-    
-    <p class="break">&#xa0;</p>
-    <p class="heading1">发表列表</p>
-    <p class="heading2">综述论文</p>
-      <ul type = "circle">
-      </ul>
-      <ol reversed type="1">
-        <li><a href="./files/publications/[2025]-paper-ACIS-EKporous-一作.pdf">📜 [PCH]</a> <b>Y.F. Huang</b>, Z.G. Tian, H.Y. Chen, W. Liu and M. Wang*. Electrokinetic transport in saturated and unsaturated porous media: A pore-scale view. <i><u>Advances in Colloid and Interface Science</u></i>, <b>349</b>: 103755, 2026.</li>
-        <li><a href="./files/publications/[2025]-paper-APR-EKmHD-mthd-一作-main.pdf">📜 [PCH]</a> <b>Y.F. Huang</b> and M. Wang*. Electrokinetic multiphase hydrodynamics. <b><i><u>Applied Physics Reviews</u></i></b>. <b>12</b>: 031322, 2025.</li>
-        <li><a href="./files/publications/[2025]-paper-ACIS-EKmHD-phys-一作.pdf">📜 [PCH]</a> <b>Y.F. Huang</b> and M. Wang*. Electrokinetics at liquid-liquid interfaces: Physical models and transport mechanisms. <b><i><u>Advances in Colloid and Interface Science</u></i></b>. <b>342</b>: 103518, 2025.</li>
-      </ol>
-      <ul type = "square">
-        <li><a href="./files/publications/[2025]-paper-CJTAM-EKmHD-app-一作.pdf">📜 [PCH]</a> <b>黄云帆</b>，王沫然*. 电动多相流体力学：机理与应用. <i><u>力学学报</u></i>, <b>57</b>: 2680, 2025.</li>
-        <li><a href="./files/publications/[2024]-paper-CJCP-NanoPhonon-二作.pdf">📜 [QH]</a> 刘彬，<b>黄云帆</b>，王沫然*. 纳尺度热传导中声子波动行为的物理及建模. <i><u>计算物理</u></i>, <b>41</b>: 746, 2024. </li>
-      </ul>
+    <h3 class="subsection-title">荣誉奖励</h3>
+    <ul class="honors-list">
+      <li class="honor-item"><span class="honor-year">2025·06</span><span>北京市优秀毕业生（博士）</span></li>
+      <li class="honor-item"><span class="honor-year">2021·12</span><span>清华大学研究生综合优秀奖一等奖（唐立新奖）</span></li>
+      <li class="honor-item"><span class="honor-year">2019·07</span><span>清华大学博士生"未来学者奖学金"</span></li>
+      <li class="honor-item"><span class="honor-year">2019·07</span><span>北京市普通高校优秀本科生毕业设计（论文）</span></li>
+      <li class="honor-item"><span class="honor-year">2019·07</span><span>清华大学本科生综合论文训练优秀论文</span></li>
+      <li class="honor-item"><span class="honor-year">2019·07</span><span>清华大学优良毕业生（本科）</span></li>
+      <li class="honor-item"><span class="honor-year">2016·10</span><span>国家奖学金</span></li>
+      <li class="honor-item"><span class="honor-year">2015·10</span><span>清华大学"拔尖创新人才培养计划"学堂班奖学金</span></li>
+    </ul>
+  </section>
 
-    <p class="break">&#xa0;</p>
-      <p class="heading2">研究论文（一作/共一）</p>
-        <ul type = "circle">
-        </ul>
-        <ol reversed type ="1">
-          <li><a href="./files/publications/[2026]-paper-EP-dEP-一作.pdf">📜 [PCH]</a> <b>Y.F. Huang</b> and M. Wang*. Electrophoresis of charged dielectric droplet with ion concentration polarization effect. <i><u>ELECTROPHORESIS</u></i>, <b>47</b>: 724-743, 2026</li>
-          <li><a href="./files/publications/[2026]-paper-PRF-tlStrip-一作.pdf">📜 [PCH]</a> <b>Y.F. Huang</b> and M. Wang*. Electrokinetic transport regulation at liquid-infused surface by liquid depletion and ion partition. <i><u>Physical Review Fluids</u></i>, <b>6</b>: 063702, 2026</li>
-          <li><a href="./files/publications/[2024]-paper-PRF-MixPart-一作.pdf">📜 [PCH]</a> <b>Y.F. Huang</b> and M. Wang*. Solvent mixing and ion partitioning effects in spontaneous charging and electrokinetic flow of immiscible liquid-liquid interface. <b><i><u>Physical Review Fluids</u></i></b>, <b>9</b>: 103701, 2024 (<b>Editors' Suggestion</b>)</li>
-          <li><a href="./files/publications/[2023]-paper-IJMS-EKmHD-exp-共一.pdf">📜 [PCH]</a> A. Alizadeh#, <b>Y.F. Huang</b>#, F.L. Liu, H. Daiguji, M. Wang*. A streaming-potential-based microfluidic measurement of surface charge at immiscible liquid-liquid interface. <i><u>International Journal of Mechanical Sciences</u></i>, <b>247</b>: 108200, 2023</li>
-          <li><a href="./files/publications/[2023]-paper-IJHMT-MC-DOM-共一.pdf">📜 [QH]</a> </a>X. Ran#, <b>Y.F. Huang</b>#, M. Wang*. A hybrid Monte Carlo-discrete ordinates method for phonon transport in micro/nanosystems with rough interfaces. <i><u>International Journal of Heat and Mass Transfer</u></i>, <b>201</b>: 123634, 2023</li>
-          <li><a href="./files/publications/[2021]-paper-PRB-eMHD-一作.pdf">📜 [QH]</a> <b>Y.F. Huang</b> and M. Wang*. Nonnegative magnetoresistance in hydrodynamic regime of electron fluid transport in two-dimensional materials. <b><i><u>Physical Review B</u></i></b>, <b>104</b>: 155408, 2021</li>
-        </ol>
-        <ul type = "square">
-          <li><a href="./files/publications/[2024]-paper-LXYSJ-HMT-LieG-一作.pdf">📜 [MS]</a> <b>黄云帆</b>，王沫然*. 力学与数理融合：浅谈相似性解方法. <i><u>力学与实践</u></i>, <b>46</b>: 868, 2024</li>
-          <li><a href="./files/publications/[2017]-paper-LXYSJ-GRB-一作.pdf">📜 [MS]</a> <b>黄云帆</b>. 平面运动刚体两类瞬心轨迹之间关系的探讨. <i><u>力学与实践</u></i>, <b>3</b>: 306, 2017</li>
-        </ul>
+  <!-- ===================== PUBLICATIONS ===================== -->
+  <section id="publications" class="section">
+    <h2>发表列表</h2>
+    <p class="section-lead">
+      含已发表论文、预印本及代表性会议报告
+    </p>
 
-    <p class="break">&#xa0;</p>
-      <p class="heading2">研究论文（其他作者）</p>
-        <ul type = "circle">
-        </ul>
-        <ol reversed type="1">
-          <li><a href="./files/publications/[2025]-paper-JFM-EC-二作.pdf">📜 [PCH]</a> W. Liu, <b>Y.F. Huang</b>, M. Wang*. Flow instability and scaling transition near strongly polarised surfaces. <b><i><u>Journal of Fluid Mechanics</u></i></b>, <b>1024</b>: A8, 2025.</li>
-          <li><a href="./files/publications/[2025]-paper-PRF-MPD-四作.pdf">📜 [CF]</a> X.K. Lu, Q.Q. Li, G. Yang, <b>Y.F. Huang</b>, W.H. Lei, M. Wang*. Geometry-mediated particle accumulation driven by nonhydrodynamic viscosity effect with flow control implications in porous media. <i><u>Physical Review Fluids</u></i>, <b>10</b>: 093304, 2025.</li>
-          <li><a href="./files/publications/[2025]-paper-PRF-GFR-三作.pdf">📜 [MS]</a> M.B. Zhang, Z.G. Tian, <b>Y.F. Huang</b>, M. Wang*. Gas flow regimes and transition criteria in porous media. <i><u>Physical Review Fluids</u></i>, <b>10</b>: 024303, 2025</li>
-          <li><a href="./files/publications/[2025]-paper-IJMS-ESC-二作.pdf">📜 [PCH]</a> W. Liu, <b>Y.F. Huang</b>, M. Wang*. Extended space charge and transport near ion-selective surfaces. <i><u>International Journal of Mechanical Sciences</u></i>, <b>287</b>: 109933, 2025</li>
-          <li><a href="./files/publications/[2024]-paper-PRF-NDF-二作.pdf">📜 [MS]</a> Z.G. Tian, <b>Y.F. Huang</b>, M. Wang*. Analytical solution of inertia effect in high-speed flows through disordered porous media. <i><u>Physical Review Fluids</u></i>, <b>9</b>: L102101, 2024</li>
-          <li><a href="./files/publications/[2024]-paper-IJMS-TFM-三作.pdf">📜 [CF]</a> Q.Q. Li, G. Yang, <b>Y.F. Huang</b>, X.K. Lu, J. Min, M. Wang*. Lattice Boltzmann method for particulate multiphase flow system. <i><u>International Journal of Mechanical Sciences</u></i>, <b>273</b>: 109217, 2024</li>
-          <li><a href="./files/publications/[2023]-paper-Langmuir-NP-二作.pdf">📜 [CF]</a> Y.R. Li, <b>Y.F. Huang</b>, X.K. Lu, M. Wang*. Criterions of distribution transitions in dispersed multiphase systems based on an extended lattice model. <u><i>Langmuir</i></u>, <b>39</b>: 17021, 2023</li>
-        </ol>
+    <div class="pub-filters" role="toolbar" aria-label="按研究方向筛选发表">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="PCH">PCH</button>
+      <button class="filter-btn" data-filter="QH">QH</button>
+      <button class="filter-btn" data-filter="AM">AM</button>
+      <button class="filter-btn" data-filter="CF">CF</button>
+      <button class="filter-btn" data-filter="MS">MS</button>
+    </div>
 
-    <p class="break">&#xa0;</p>
-      <p class="heading2">会议报告</p>
-        <ul type = "circle">
-        </ul>
-        <ol reversed type="1">
-          <li>[PCH] <b>Y.F. Huang</b>, W. Liu, M. Wang*. Electrokinetic multiphase flow at spontaneously charged liquid-liquid interface: A diffuse interface model with adsorption-induced interface charge (Oral & long abstract). ICTAM 2024. Daegu, Korea. 2024.08</li>
-          <li>[PCH] <b>Y.F. Huang</b>, A. Alizadeh, F.L. Liu, M. Wang*. Measurement of surface charge at immiscible liquid-liquid interface using streaming-potential-on-microfluidics (Oral). InterPore 2023. Edinburgh, UK. 2023.05</li>
-        </ol>
-        <ul type = "square">
-          <li>[PCH] <b>黄云帆</b>，王沫然*. 高表面带电量介电液滴电泳的离子浓度极化效应研究 (口头报告). 中国力学大会-2025. 长沙，中国. 2025.08 (接收)</li>
-          <li>[PCH] <b>黄云帆</b>，王沫然*. 基于流动电势的液液界面电荷密度测量方法 (口头报告). 第十二届全国流体力学学术会议. 西安，中国. 2022.11</li>
-          <li>[QH] <b>黄云帆</b>，王沫然*. 微纳尺度低维电子输运的水动力学研究 (口头报告 & 论文). 中国力学大会-2019. 杭州，中国. 2019.08</li>
-        </ul>
+    <h3 class="subsection-title">综述论文</h3>
+    <div class="pub-list">
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">综述</span>
+          <span class="tag tag-cn">SCI</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2025]-paper-ACIS-EKporous-一作.pdf" target="_blank" rel="noopener">Electrokinetic transport in saturated and unsaturated porous media: A pore-scale view</a></p>
+          <p class="pub-authors"><b>Y.F. Huang</b>, Z.G. Tian, H.Y. Chen, W. Liu and M. Wang*</p>
+          <p class="pub-journal"><em>Advances in Colloid and Interface Science</em>, <b>349</b>: 103755, 2026</p>
+        </div>
+        <div class="pub-year">2026</div>
+      </article>
 
-    <p class="break">&#xa0;</p>
-      <p class="heading2">专利软著</p>
-          <li>[PCH] 王沫然，黄云帆. 一种不混溶液体界面电荷密度原位测量方法、装置和系统，CN 118707295 B. 2025-09-02.</li>
-          <li>[PCH] 王沫然，黄云帆，刘凡犁. 一种测量液液界面电荷密度的方法及装置，CN 114216950 B. 2024-04-12.</li>
-          <li>[MS] 王沫然，杨光，陈航宇，黄云帆. 多物理多相多尺度流动模拟软件 (𝜇<sup>3</sup>–FLOWS) V1.0. 登记号：2024SR0160474.</li>
-        </ol>
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">综述</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2025]-paper-APR-EKmHD-mthd-一作-main.pdf" target="_blank" rel="noopener">Electrokinetic multiphase hydrodynamics</a></p>
+          <p class="pub-authors"><b>Y.F. Huang</b> and M. Wang*</p>
+          <p class="pub-journal"><b><em>Applied Physics Reviews</em></b>, <b>12</b>: 031322, 2025</p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
 
-    <p class="break">&#xa0;</p>
-    <p class="heading1">统计数据</p>
-    <script src="(()=>{if(window.busuanziRequestSent)return;window.busuanziRequestSent=true;const u=new URL(document.currentScript.src);fetch(u.protocol+'//'+u.host+'/api.php',{method:'POST',body:JSON.stringify({url:location.href,referrer:document.referrer})}).then(r=>r.json()).then(r=>{for(const k in r)document.querySelectorAll('#'+k).forEach(e=>e.innerText=r[k])}).catch(e=>console.error(e))})()" defer></script>
-    <link rel="stylesheet" href="https://cdn.coolcdn.cn/static/font-awesome/7.0.0/css/all.min.css">
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">综述</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2025]-paper-ACIS-EKmHD-phys-一作.pdf" target="_blank" rel="noopener">Electrokinetics at liquid-liquid interfaces: Physical models and transport mechanisms</a></p>
+          <p class="pub-authors"><b>Y.F. Huang</b> and M. Wang*</p>
+          <p class="pub-journal"><b><em>Advances in Colloid and Interface Science</em></b>, <b>342</b>: 103518, 2025</p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
 
-        <ul type = "circle">
-          <li>今日总访问量 <span id="busuanzi_today_pv"><i class="fa fa-spinner fa-spin"></i></span> 次；今日总访客数 <span id="busuanzi_today_uv"><i class="fa fa-spinner fa-spin"></i></span> 人</li>
-          <li>本站总访问量 <span id="busuanzi_site_pv"><i class="fa fa-spinner fa-spin"></i></span> 次；本站总访客数 <span id="busuanzi_site_uv"><i class="fa fa-spinner fa-spin"></i></span> 人</li>
-        </ul>    
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">综述</span>
+          <span class="tag tag-cn">中文</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2025]-paper-CJTAM-EKmHD-app-一作.pdf" target="_blank" rel="noopener">电动多相流体力学：机理与应用</a></p>
+          <p class="pub-authors"><b>黄云帆</b>，王沫然*</p>
+          <p class="pub-journal"><em>力学学报</em>, <b>57</b>: 2680, 2025</p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
 
-  </body>
+      <article class="pub-card" data-tag="QH">
+        <div class="pub-meta">
+          <span class="tag tag-QH">QH</span>
+          <span class="tag tag-extra">综述</span>
+          <span class="tag tag-cn">中文</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2024]-paper-CJCP-NanoPhonon-二作.pdf" target="_blank" rel="noopener">纳尺度热传导中声子波动行为的物理及建模</a></p>
+          <p class="pub-authors">刘彬，<b>黄云帆</b>，王沫然*</p>
+          <p class="pub-journal"><em>计算物理</em>, <b>41</b>: 746, 2024</p>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+    </div>
+
+    <h3 class="subsection-title">研究论文（一作 / 共一）</h3>
+    <div class="pub-list">
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2026]-paper-EP-dEP-一作.pdf" target="_blank" rel="noopener">Electrophoresis of charged dielectric droplet with ion concentration polarization effect</a></p>
+          <p class="pub-authors"><b>Y.F. Huang</b> and M. Wang*</p>
+          <p class="pub-journal"><em>ELECTROPHORESIS</em>, <b>47</b>: 724–743, 2026</p>
+        </div>
+        <div class="pub-year">2026</div>
+      </article>
+
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2026]-paper-PRF-tlStrip-一作.pdf" target="_blank" rel="noopener">Electrokinetic transport regulation at liquid-infused surface by liquid depletion and ion partition</a></p>
+          <p class="pub-authors"><b>Y.F. Huang</b> and M. Wang*</p>
+          <p class="pub-journal"><em>Physical Review Fluids</em>, <b>6</b>: 063702, 2026</p>
+        </div>
+        <div class="pub-year">2026</div>
+      </article>
+
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-highlight">★ 编辑推荐</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2024]-paper-PRF-MixPart-一作.pdf" target="_blank" rel="noopener">Solvent mixing and ion partitioning effects in spontaneous charging and electrokinetic flow of immiscible liquid-liquid interface</a></p>
+          <p class="pub-authors"><b>Y.F. Huang</b> and M. Wang*</p>
+          <p class="pub-journal"><b><em>Physical Review Fluids</em></b>, <b>9</b>: 103701, 2024. （<b>Editors' Suggestion</b>）</p>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">共一</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2023]-paper-IJMS-EKmHD-exp-共一.pdf" target="_blank" rel="noopener">A streaming-potential-based microfluidic measurement of surface charge at immiscible liquid-liquid interface</a></p>
+          <p class="pub-authors">A. Alizadeh<sup>#</sup>, <b>Y.F. Huang</b><sup>#</sup>, F.L. Liu, H. Daiguji, M. Wang*</p>
+          <p class="pub-journal"><em>International Journal of Mechanical Sciences</em>, <b>247</b>: 108200, 2023</p>
+        </div>
+        <div class="pub-year">2023</div>
+      </article>
+
+      <article class="pub-card" data-tag="QH">
+        <div class="pub-meta">
+          <span class="tag tag-QH">QH</span>
+          <span class="tag tag-extra">共一</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2023]-paper-IJHMT-MC-DOM-共一.pdf" target="_blank" rel="noopener">A hybrid Monte Carlo-discrete ordinates method for phonon transport in micro/nanosystems with rough interfaces</a></p>
+          <p class="pub-authors">X. Ran<sup>#</sup>, <b>Y.F. Huang</b><sup>#</sup>, M. Wang*</p>
+          <p class="pub-journal"><em>International Journal of Heat and Mass Transfer</em>, <b>201</b>: 123634, 2023</p>
+        </div>
+        <div class="pub-year">2023</div>
+      </article>
+
+      <article class="pub-card" data-tag="QH">
+        <div class="pub-meta">
+          <span class="tag tag-QH">QH</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2021]-paper-PRB-eMHD-一作.pdf" target="_blank" rel="noopener">Nonnegative magnetoresistance in hydrodynamic regime of electron fluid transport in two-dimensional materials</a></p>
+          <p class="pub-authors"><b>Y.F. Huang</b> and M. Wang*</p>
+          <p class="pub-journal"><b><em>Physical Review B</em></b>, <b>104</b>: 155408, 2021</p>
+        </div>
+        <div class="pub-year">2021</div>
+      </article>
+
+      <article class="pub-card" data-tag="MS">
+        <div class="pub-meta">
+          <span class="tag tag-MS">MS</span>
+          <span class="tag tag-cn">中文</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2024]-paper-LXYSJ-HMT-LieG-一作.pdf" target="_blank" rel="noopener">力学与数理融合：浅谈相似性解方法</a></p>
+          <p class="pub-authors"><b>黄云帆</b>，王沫然*</p>
+          <p class="pub-journal"><em>力学与实践</em>, <b>46</b>: 868, 2024</p>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+
+      <article class="pub-card" data-tag="MS">
+        <div class="pub-meta">
+          <span class="tag tag-MS">MS</span>
+          <span class="tag tag-cn">中文</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2017]-paper-LXYSJ-GRB-一作.pdf" target="_blank" rel="noopener">平面运动刚体两类瞬心轨迹之间关系的探讨</a></p>
+          <p class="pub-authors"><b>黄云帆</b></p>
+          <p class="pub-journal"><em>力学与实践</em>, <b>3</b>: 306, 2017</p>
+        </div>
+        <div class="pub-year">2017</div>
+      </article>
+    </div>
+
+    <h3 class="subsection-title">研究论文（其他作者）</h3>
+    <div class="pub-list">
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2025]-paper-JFM-EC-二作.pdf" target="_blank" rel="noopener">Flow instability and scaling transition near strongly polarised surfaces</a></p>
+          <p class="pub-authors">W. Liu, <b>Y.F. Huang</b>, M. Wang*</p>
+          <p class="pub-journal"><b><em>Journal of Fluid Mechanics</em></b>, <b>1024</b>: A8, 2025</p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
+
+      <article class="pub-card" data-tag="CF">
+        <div class="pub-meta">
+          <span class="tag tag-CF">CF</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2025]-paper-PRF-MPD-四作.pdf" target="_blank" rel="noopener">Geometry-mediated particle accumulation driven by nonhydrodynamic viscosity effect with flow control implications in porous media</a></p>
+          <p class="pub-authors">X.K. Lu, Q.Q. Li, G. Yang, <b>Y.F. Huang</b>, W.H. Lei, M. Wang*</p>
+          <p class="pub-journal"><em>Physical Review Fluids</em>, <b>10</b>: 093304, 2025</p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
+
+      <article class="pub-card" data-tag="MS">
+        <div class="pub-meta">
+          <span class="tag tag-MS">MS</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2025]-paper-PRF-GFR-三作.pdf" target="_blank" rel="noopener">Gas flow regimes and transition criteria in porous media</a></p>
+          <p class="pub-authors">M.B. Zhang, Z.G. Tian, <b>Y.F. Huang</b>, M. Wang*</p>
+          <p class="pub-journal"><em>Physical Review Fluids</em>, <b>10</b>: 024303, 2025</p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
+
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2025]-paper-IJMS-ESC-二作.pdf" target="_blank" rel="noopener">Extended space charge and transport near ion-selective surfaces</a></p>
+          <p class="pub-authors">W. Liu, <b>Y.F. Huang</b>, M. Wang*</p>
+          <p class="pub-journal"><em>International Journal of Mechanical Sciences</em>, <b>287</b>: 109933, 2025</p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
+
+      <article class="pub-card" data-tag="MS">
+        <div class="pub-meta">
+          <span class="tag tag-MS">MS</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2024]-paper-PRF-NDF-二作.pdf" target="_blank" rel="noopener">Analytical solution of inertia effect in high-speed flows through disordered porous media</a></p>
+          <p class="pub-authors">Z.G. Tian, <b>Y.F. Huang</b>, M. Wang*</p>
+          <p class="pub-journal"><em>Physical Review Fluids</em>, <b>9</b>: L102101, 2024</p>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+
+      <article class="pub-card" data-tag="CF">
+        <div class="pub-meta">
+          <span class="tag tag-CF">CF</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2024]-paper-IJMS-TFM-三作.pdf" target="_blank" rel="noopener">Lattice Boltzmann method for particulate multiphase flow system</a></p>
+          <p class="pub-authors">Q.Q. Li, G. Yang, <b>Y.F. Huang</b>, X.K. Lu, J. Min, M. Wang*</p>
+          <p class="pub-journal"><em>International Journal of Mechanical Sciences</em>, <b>273</b>: 109217, 2024</p>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+
+      <article class="pub-card" data-tag="CF">
+        <div class="pub-meta">
+          <span class="tag tag-CF">CF</span>
+        </div>
+        <div>
+          <p class="pub-title"><a href="./files/publications/[2023]-paper-Langmuir-NP-二作.pdf" target="_blank" rel="noopener">Criterions of distribution transitions in dispersed multiphase systems based on an extended lattice model</a></p>
+          <p class="pub-authors">Y.R. Li, <b>Y.F. Huang</b>, X.K. Lu, M. Wang*</p>
+          <p class="pub-journal"><u><em>Langmuir</em></u>, <b>39</b>: 17021, 2023</p>
+        </div>
+        <div class="pub-year">2023</div>
+      </article>
+    </div>
+
+    <h3 class="subsection-title">会议报告</h3>
+    <div class="pub-list">
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">口头 · 长摘要</span>
+        </div>
+        <div>
+          <p class="pub-title">Electrokinetic multiphase flow at spontaneously charged liquid-liquid interface: A diffuse interface model with adsorption-induced interface charge</p>
+          <p class="pub-authors"><b>Y.F. Huang</b>, W. Liu, M. Wang*</p>
+          <p class="pub-journal">ICTAM 2024 · 大邱，韩国 · 2024·08</p>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">口头</span>
+        </div>
+        <div>
+          <p class="pub-title">Measurement of surface charge at immiscible liquid-liquid interface using streaming-potential-on-microfluidics</p>
+          <p class="pub-authors"><b>Y.F. Huang</b>, A. Alizadeh, F.L. Liu, M. Wang*</p>
+          <p class="pub-journal">InterPore 2023 · 爱丁堡，英国 · 2023·05</p>
+        </div>
+        <div class="pub-year">2023</div>
+      </article>
+
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">口头 · 接收</span>
+          <span class="tag tag-cn">中文</span>
+        </div>
+        <div>
+          <p class="pub-title">高表面带电量介电液滴电泳的离子浓度极化效应研究</p>
+          <p class="pub-authors"><b>黄云帆</b>，王沫然*</p>
+          <p class="pub-journal">中国力学大会-2025 · 长沙，中国 · 2025·08. <i>已接收</i></p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
+
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">口头</span>
+          <span class="tag tag-cn">中文</span>
+        </div>
+        <div>
+          <p class="pub-title">基于流动电势的液液界面电荷密度测量方法</p>
+          <p class="pub-authors"><b>黄云帆</b>，王沫然*</p>
+          <p class="pub-journal">第十二届全国流体力学学术会议 · 西安，中国 · 2022·11</p>
+        </div>
+        <div class="pub-year">2022</div>
+      </article>
+
+      <article class="pub-card" data-tag="QH">
+        <div class="pub-meta">
+          <span class="tag tag-QH">QH</span>
+          <span class="tag tag-extra">口头 · 论文</span>
+          <span class="tag tag-cn">中文</span>
+        </div>
+        <div>
+          <p class="pub-title">微纳尺度低维电子输运的水动力学研究</p>
+          <p class="pub-authors"><b>黄云帆</b>，王沫然*</p>
+          <p class="pub-journal">中国力学大会-2019 · 杭州，中国 · 2019·08</p>
+        </div>
+        <div class="pub-year">2019</div>
+      </article>
+    </div>
+
+    <h3 class="subsection-title">专利软著</h3>
+    <div class="pub-list">
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">发明专利</span>
+        </div>
+        <div>
+          <p class="pub-title">一种不混溶液体界面电荷密度原位测量方法、装置和系统</p>
+          <p class="pub-authors">王沫然，黄云帆*</p>
+          <p class="pub-journal">CN 118707295 B · 授权公告日：2025-09-02</p>
+        </div>
+        <div class="pub-year">2025</div>
+      </article>
+
+      <article class="pub-card" data-tag="PCH">
+        <div class="pub-meta">
+          <span class="tag tag-PCH">PCH</span>
+          <span class="tag tag-extra">发明专利</span>
+        </div>
+        <div>
+          <p class="pub-title">一种测量液液界面电荷密度的方法及装置</p>
+          <p class="pub-authors">王沫然，黄云帆，刘凡犁*</p>
+          <p class="pub-journal">CN 114216950 B · 授权公告日：2024-04-12</p>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+
+      <article class="pub-card" data-tag="MS">
+        <div class="pub-meta">
+          <span class="tag tag-MS">MS</span>
+          <span class="tag tag-extra">软件著作权</span>
+        </div>
+        <div>
+          <p class="pub-title">多物理多相多尺度流动模拟软件 (μ<sup>3</sup>–FLOWS) V1.0</p>
+          <p class="pub-authors">王沫然，杨光，陈航宇，黄云帆</p>
+          <p class="pub-journal">登记号：2024SR0160474</p>
+        </div>
+        <div class="pub-year">2024</div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="stats-row">
+      <span><span class="idx">总访问量 · Total PV</span><span id="vercount_value_site_pv">···</span></span>
+      <span><span class="idx">总访客数 · Total UV</span><span id="vercount_value_site_uv">···</span></span>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> 黄云帆 · 最后更新：2026 年 9 月 · 托管于 GitHub Pages</div>
+  </div>
+</footer>
+
+<a href="#top" class="back-to-top" id="backToTop" aria-label="回到顶部">↑</a>
+
+<script defer src="https://cn.vercount.one/js"></script>
+<script>
+(function () {
+  // ---- Publication filtering ----
+  var btns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.pub-card');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = btn.getAttribute('data-filter');
+      btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
+      cards.forEach(function (card) {
+        var tags = (card.getAttribute('data-tag') || '').split(/\s+/);
+        card.classList.toggle('hidden', !(filter === 'all' || tags.indexOf(filter) !== -1));
+      });
+    });
+  });
+
+  // ---- Back to top ----
+  var back = document.getElementById('backToTop');
+  if (back) {
+    var toggle = function () { back.classList.toggle('visible', window.scrollY > 400); };
+    window.addEventListener('scroll', toggle, { passive: true });
+    toggle();
+    back.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ---- Year in footer ----
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
 </html>
