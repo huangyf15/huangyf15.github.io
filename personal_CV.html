@@ -69,6 +69,7 @@ a:hover { color: var(--accent-dark); }
   border-radius: var(--radius-sm);
 }
 .nav-links a:hover { background: var(--bg-subtle); color: var(--text-1); }
+.nav-links a.active { color: var(--text-1); background: var(--bg-subtle); }
 .lang-switch {
   display: flex; font-size: 12px;
   border: 1px solid var(--border-soft);
@@ -128,19 +129,22 @@ a:hover { color: var(--accent-dark); }
 </head>
 <body data-page-node-id="EQOpxUng3qwUMPQL1V57pI">
 
-<header class="topnav" data-page-node-id="9CoT6FmkrVBj1QpHDWfH3R">
-  <div class="topnav-inner" data-page-node-id="HEv3qzXUwDciNN8E8QShqb">
-    <a href="index.html" class="brand" data-page-node-id="kwwtFy4keAetpIz1bQBEUD">
-      <span class="brand-mark" data-page-node-id="p3WD0kloADEUSouug1tiFK">Y</span>
-      <span data-page-node-id="Qj4Ai6QUei7NCsuXncLiT7">Yunfan Huang</span>
+<header class="topnav" data-page-node-id="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">Y</span>
+      <span>Yunfan Huang</span>
     </a>
-    <nav class="nav-links" data-page-node-id="F3HTAsmB0dsiIhQLJBj81P">
-      <a href="index.html" data-page-node-id="Ap3mEFDHqPWh1D0DNXe1kW">Home</a>
-      <a href="index_zh.html" data-page-node-id="FQsmvAxklzEuRqsAuUCfCS">中文主页</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="publications.html">Publications</a>
+      <a href="personal_CV.html" class="active">CV</a>
     </nav>
-    <div class="lang-switch" data-page-node-id="HGXS3gcg2vQFcFv86UlSeL">
-      <a href="index.html" data-page-node-id="Dn3C79dqMX2dEDT8XHntQj">EN</a>
-      <a href="index_zh.html" data-page-node-id="zLHJqCHhGi4oKCChiQX8FL">中</a>
+    <div class="lang-switch">
+      <a href="index.html" class="active">EN</a>
+      <a href="index_zh.html">中</a>
     </div>
   </div>
 </header>

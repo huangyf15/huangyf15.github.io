@@ -7,512 +7,32 @@
 <meta name="description" content="黄云帆 (Yunfan Huang)，清华大学工程力学系博士。研究方向：液-液界面的电动输运机理与多尺度建模。" data-page-node-id="PITWB47p0d8jJrL547Uf5l">
 <meta name="author" content="黄云帆" data-page-node-id="PTXAamErI3axZqHYJi51eE">
 <link rel="icon" href="favicon.svg" type="image/svg+xml" data-page-node-id="GfoLGCzueoOXWdjk4FAHIp">
-<style>
-:root {
-  --bg-page: #FAFAF7;
-  --bg-card: #FFFFFF;
-  --bg-subtle: #F4F2EC;
-  --border-soft: rgba(28,30,34,0.08);
-  --border-medium: rgba(28,30,34,0.16);
-  --text-1: #1F2024;
-  --text-2: #4F4E4A;
-  --text-3: #8A8983;
-  --accent: #185FA5;
-  --accent-dark: #0C447C;
-  --accent-soft: #E6F1FB;
-  --tag-PCH-bg: #E1F5EE; --tag-PCH-fg: #085041;
-  --tag-QH-bg:  #E6F1FB; --tag-QH-fg:  #0C447C;
-  --tag-AM-bg:  #FAEEDA; --tag-AM-fg:  #633806;
-  --tag-CF-bg:  #FBEAF0; --tag-CF-fg:  #72243E;
-  --tag-MS-bg:  #EEEDFE; --tag-MS-fg:  #3C3489;
-  --highlight-bg: #FAEEDA;
-  --highlight-fg: #854F0B;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --maxw: 940px;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --font-serif: ui-serif, Georgia, "Times New Roman", "Songti SC", serif;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 76px; }
-body {
-  margin: 0;
-  font-family: var(--font-sans);
-  font-size: 15px;
-  line-height: 1.75;
-  color: var(--text-1);
-  background: var(--bg-page);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-a { color: var(--accent); text-decoration: none; transition: color .15s; }
-a:hover { color: var(--accent-dark); text-decoration: underline; }
-
-/* ============ TOP NAV ============ */
-.topnav {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(250,250,247,0.86);
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
-  backdrop-filter: saturate(180%) blur(10px);
-  border-bottom: 1px solid var(--border-soft);
-}
-.topnav-inner {
-  max-width: var(--maxw); margin: 0 auto;
-  padding: 12px 24px;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
-}
-.brand {
-  display: flex; align-items: center; gap: 10px;
-  font-weight: 500; font-size: 14px; color: var(--text-1);
-  letter-spacing: 0.2px;
-}
-.brand-mark {
-  width: 28px; height: 28px;
-  background: var(--accent); color: white;
-  border-radius: 8px;
-  display: grid; place-items: center;
-  font-weight: 500; font-size: 14px;
-}
-.nav-links { display: flex; gap: 2px; font-size: 13px; }
-.nav-links a {
-  color: var(--text-2);
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
-  transition: background .15s, color .15s;
-}
-.nav-links a:hover { background: var(--bg-subtle); color: var(--text-1); text-decoration: none; }
-.lang-switch {
-  display: flex; font-size: 12px;
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-}
-.lang-switch a { padding: 4px 10px; color: var(--text-3); }
-.lang-switch a.active { background: var(--accent-soft); color: var(--accent); font-weight: 500; }
-
-/* ============ CONTAINER ============ */
-.container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-
-/* ============ HERO ============ */
-.hero {
-  display: grid; grid-template-columns: 200px 1fr;
-  gap: 36px;
-  padding: 48px 0 40px;
-  align-items: start;
-}
-.photo-frame {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-md);
-  padding: 8px;
-}
-.photo-frame img {
-  width: 100%; height: auto; display: block; border-radius: 4px;
-}
-.photo-meta {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 11px;
-  color: var(--text-3);
-  letter-spacing: 0.4px;
-}
-.bio h1 {
-  margin: 0;
-  font-size: 32px; font-weight: 500;
-  letter-spacing: -0.5px; line-height: 1.2;
-}
-.bio .en-name {
-  font-size: 18px; color: var(--text-2); font-weight: 400;
-  margin-left: 10px;
-}
-.bio .title-line {
-  margin: 8px 0 18px;
-  color: var(--accent);
-  font-size: 14px; font-weight: 500;
-  letter-spacing: 0.2px;
-}
-.bio .tagline {
-  margin: 0 0 24px;
-  font-size: 15px; line-height: 1.8;
-  color: var(--text-2);
-  max-width: 580px;
-}
-.contact-chips { display: flex; gap: 8px; flex-wrap: wrap; }
-.chip {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  color: var(--text-1);
-  padding: 6px 13px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  transition: border-color .15s, background .15s, color .15s;
-}
-.chip:hover {
-  border-color: var(--border-medium);
-  background: var(--bg-subtle);
-  text-decoration: none;
-  color: var(--text-1);
-}
-.disc-pills {
-  display: flex; flex-wrap: wrap; gap: 6px;
-  margin: -10px 0 24px;
-}
-.disc {
-  font-size: 11.5px; font-weight: 500;
-  color: var(--text-2);
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-soft);
-  padding: 3px 11px;
-  border-radius: 999px;
-  letter-spacing: 0.3px;
-}
-
-/* ============ SECTIONS ============ */
-.section { padding: 40px 0; border-top: 1px solid var(--border-soft); }
-.section h2 {
-  margin: 0 0 6px;
-  font-size: 22px; font-weight: 500;
-  letter-spacing: 0.1px;
-}
-.section-lead {
-  margin: 0 0 18px;
-  color: var(--text-2); font-size: 14px;
-  max-width: 640px;
-}
-.subsection-title {
-  margin: 20px 0 10px;
-  font-size: 11px; font-weight: 500;
-  color: var(--text-3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.subsection-title:first-of-type { margin-top: 12px; }
-
-/* ============ RESEARCH GRID ============ */
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-  gap: 10px;
-}
-.research-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-left: 3px solid var(--accent);
-  border-radius: var(--radius-md);
-  padding: 14px 16px;
-  transition: border-color .15s;
-}
-.research-card:hover { border-color: var(--border-medium); }
-.research-card[data-tag="PCH"] { border-left-color: var(--tag-PCH-fg); }
-.research-card[data-tag="QH"]  { border-left-color: var(--tag-QH-fg); }
-.research-card[data-tag="AM"]  { border-left-color: var(--tag-AM-fg); }
-.research-card[data-tag="CF"]  { border-left-color: var(--tag-CF-fg); }
-.research-card[data-tag="MS"]  { border-left-color: var(--tag-MS-fg); }
-.research-card .tag-label {
-  font-size: 11px; font-weight: 500;
-  letter-spacing: 1.4px;
-  margin-bottom: 6px;
-}
-.research-card[data-tag="PCH"] .tag-label { color: var(--tag-PCH-fg); }
-.research-card[data-tag="QH"]  .tag-label { color: var(--tag-QH-fg); }
-.research-card[data-tag="AM"]  .tag-label { color: var(--tag-AM-fg); }
-.research-card[data-tag="CF"]  .tag-label { color: var(--tag-CF-fg); }
-.research-card[data-tag="MS"]  .tag-label { color: var(--tag-MS-fg); }
-.research-card .tag-full {
-  font-size: 13px; color: var(--text-1); line-height: 1.6;
-}
-
-/* ============ TIMELINE ============ */
-.timeline {
-  position: relative;
-  padding-left: 22px;
-  margin: 0 0 32px;
-}
-.timeline::before {
-  content: ""; position: absolute;
-  left: 4px; top: 6px; bottom: 6px;
-  width: 1px; background: var(--border-medium);
-}
-.timeline-item { position: relative; padding: 0 0 22px; }
-.timeline-item:last-child { padding-bottom: 0; }
-.timeline-item::before {
-  content: ""; position: absolute;
-  left: -22px; top: 8px;
-  width: 9px; height: 9px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid var(--bg-page);
-}
-.timeline-item.muted::before { background: var(--text-3); }
-.timeline-year {
-  font-size: 12px; color: var(--text-3);
-  letter-spacing: 0.5px; margin-bottom: 2px;
-  font-variant-numeric: tabular-nums;
-}
-.timeline-title {
-  font-size: 15px; font-weight: 500;
-  margin-bottom: 4px; color: var(--text-1);
-}
-.timeline-detail {
-  font-size: 13.5px; color: var(--text-2); line-height: 1.7;
-}
-
-/* ============ HONORS ============ */
-.honors-list {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: 1fr; gap: 6px;
-}
-.honor-item {
-  display: grid; grid-template-columns: 92px 1fr;
-  gap: 16px;
-  padding: 10px 14px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-sm);
-  font-size: 13.5px;
-}
-.honor-year {
-  color: var(--text-3); font-size: 12px;
-  font-variant-numeric: tabular-nums;
-}
-
-/* ============ PORTFOLIO ============ */
-.portfolio-block {
-  margin-top: 32px;
-  padding: 18px 20px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-md);
-}
-.portfolio-block h4 {
-  margin: 0 0 12px;
-  font-size: 11px; font-weight: 500;
-  color: var(--text-3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.portfolio-group { margin-bottom: 14px; }
-.portfolio-group:last-child { margin-bottom: 0; }
-.portfolio-group .group-title {
-  display: block;
-  margin: 0 0 4px;
-  font-size: 13px; font-weight: 500; font-style: italic;
-  color: var(--text-2);
-}
-.portfolio-list {
-  list-style: none; margin: 0; padding: 0;
-}
-.portfolio-list li {
-  padding: 5px 0;
-  font-size: 13.5px;
-  color: var(--text-1);
-  display: flex; gap: 10px; align-items: baseline;
-}
-.portfolio-list .port-date {
-  font-size: 11px; color: var(--text-3);
-  font-variant-numeric: tabular-nums;
-  min-width: 64px;
-}
-
-/* ============ SERVICES ============ */
-.services {
-  margin-top: 18px;
-  padding: 14px 18px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-md);
-  font-size: 13.5px; color: var(--text-2);
-}
-.services h4 {
-  margin: 0 0 6px;
-  font-size: 11px; font-weight: 500;
-  color: var(--text-3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* ============ PUBLICATION FILTERS ============ */
-.pub-filters {
-  display: flex; flex-wrap: wrap;
-  gap: 5px;
-  margin: 12px 0 16px;
-}
-.filter-btn {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  color: var(--text-2);
-  font-family: inherit;
-  font-size: 12px; font-weight: 500;
-  letter-spacing: 0.4px;
-  padding: 4px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all .15s;
-}
-.filter-btn:hover { border-color: var(--border-medium); color: var(--text-1); }
-.filter-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
-.filter-btn[data-tag="PCH"].active { background: var(--tag-PCH-fg); border-color: var(--tag-PCH-fg); }
-.filter-btn[data-tag="QH"].active  { background: var(--tag-QH-fg);  border-color: var(--tag-QH-fg); }
-.filter-btn[data-tag="AM"].active  { background: var(--tag-AM-fg);  border-color: var(--tag-AM-fg); }
-.filter-btn[data-tag="CF"].active  { background: var(--tag-CF-fg);  border-color: var(--tag-CF-fg); }
-.filter-btn[data-tag="MS"].active  { background: var(--tag-MS-fg);  border-color: var(--tag-MS-fg); }
-
-/* ============ PUBLICATION CARDS ============ */
-.pub-list { display: flex; flex-direction: column; gap: 5px; }
-.pub-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-sm);
-  padding: 8px 14px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px;
-  align-items: start;
-  transition: border-color .15s;
-}
-.pub-card:hover { border-color: var(--border-medium); }
-.pub-card.hidden { display: none; }
-.pub-meta {
-  display: flex; gap: 5px; flex-wrap: wrap; align-items: center;
-  margin-bottom: 5px;
-  grid-column: 1 / -1;
-}
-.tag {
-  font-size: 10px; font-weight: 500;
-  padding: 1px 7px;
-  border-radius: 4px;
-  letter-spacing: 0.6px;
-}
-.tag-PCH { background: var(--tag-PCH-bg); color: var(--tag-PCH-fg); }
-.tag-QH  { background: var(--tag-QH-bg);  color: var(--tag-QH-fg); }
-.tag-AM  { background: var(--tag-AM-bg);  color: var(--tag-AM-fg); }
-.tag-CF  { background: var(--tag-CF-bg);  color: var(--tag-CF-fg); }
-.tag-MS  { background: var(--tag-MS-bg);  color: var(--tag-MS-fg); }
-.tag-extra { background: var(--bg-subtle); color: var(--text-2); }
-.tag-highlight { background: var(--highlight-bg); color: var(--highlight-fg); }
-.tag-cn { background: transparent; color: var(--text-3); border: 1px solid var(--border-soft); }
-.pub-year {
-  font-size: 11.5px; color: var(--text-3);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  padding-top: 1px;
-}
-.pub-title {
-  margin: 0 0 3px;
-  font-size: 13.5px; font-weight: 500;
-  line-height: 1.4;
-  color: var(--text-1);
-}
-.pub-title a { color: inherit; }
-.pub-title a:hover { color: var(--accent); }
-.pub-authors {
-  margin: 0 0 2px;
-  font-size: 12px;
-  color: var(--text-2);
-  font-style: italic;
-}
-.pub-journal {
-  margin: 0;
-  font-size: 11.5px;
-  color: var(--text-3);
-}
-.pub-journal em { font-style: italic; }
-.pub-journal b { font-weight: 500; color: var(--text-2); }
-
-/* ============ FOOTER ============ */
-.site-footer {
-  margin-top: 60px;
-  padding: 28px 0 36px;
-  border-top: 1px solid var(--border-soft);
-  background: var(--bg-card);
-}
-.stats-row {
-  display: flex; gap: 18px; flex-wrap: wrap;
-  font-size: 12.5px;
-  color: var(--text-2);
-  align-items: center;
-}
-.stats-row .idx { color: var(--text-3); margin-right: 4px; }
-.stats-row .stats-since { color: var(--text-3); }
-.copyright {
-  margin-top: 12px;
-  font-size: 12px;
-  color: var(--text-3);
-}
-
-/* ============ BACK TO TOP ============ */
-.back-to-top {
-  position: fixed;
-  right: 24px; bottom: 24px;
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: var(--bg-card);
-  border: 1px solid var(--border-medium);
-  color: var(--text-2);
-  display: grid; place-items: center;
-  font-size: 16px;
-  text-decoration: none;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity .2s, transform .2s, color .15s, border-color .15s;
-  pointer-events: none;
-}
-.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
-.back-to-top:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
-
-/* ============ RESPONSIVE ============ */
-@media (max-width: 760px) {
-  .topnav-inner { padding: 10px 16px; }
-  .container { padding: 0 16px; }
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 28px 0 24px;
-    text-align: center;
-  }
-  .photo-frame { max-width: 160px; margin: 0 auto; }
-  .bio h1 { font-size: 26px; }
-  .bio .en-name { display: block; margin-left: 0; margin-top: 4px; font-size: 16px; }
-  .bio .tagline { margin-left: auto; margin-right: auto; }
-  .contact-chips { justify-content: center; }
-  .section { padding: 32px 0; }
-  .section h2 { font-size: 20px; }
-  .research-grid { grid-template-columns: 1fr 1fr; }
-  .honor-item { grid-template-columns: 76px 1fr; padding: 9px 12px; }
-  .pub-card { grid-template-columns: 1fr; }
-  .pub-year { padding-top: 0; }
-  .pub-meta { grid-column: 1; }
-}
-@media (max-width: 440px) {
-  .research-grid { grid-template-columns: 1fr; }
-  .nav-links { font-size: 12px; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-zh.css">
 </head>
-<body data-page-node-id="BsothY9ZsvnXZm7ZTGGEcv">
+<body>
 
-<header class="topnav" data-page-node-id="hjFmlgHgwf8zqnfJ9cVIGa">
-  <div class="topnav-inner" data-page-node-id="EWVSvcGBFlB5TQYsFXCOd9">
-    <a href="#top" class="brand" data-page-node-id="3YNgcX3M4LLwGWEtfwDJAE">
-      <span class="brand-mark" data-page-node-id="oJRlDkEe2pIyKRwkkIsygO">黄</span>
-      <span data-page-node-id="AAXEyF8xVOIB4TTZCPOHtm">黄云帆</span>
+<header class="topnav" data-page-node-id="topnav">
+  <div class="topnav-inner">
+    <a href="index_zh.html" class="brand">
+      <span class="brand-mark">Y</span>
+      <span>黄云帆</span>
     </a>
-    <nav class="nav-links" data-page-node-id="Mk723dKNw9U7DKMyHtFzmo">
-      <a href="#research" data-page-node-id="jLBnm31mM5C6CKS2ghs6Nd">研究兴趣</a>
-      <a href="#education" data-page-node-id="8eULX5IHRTt9Ctbd8Hiogc">教育经历</a>
-      <a href="#publications" data-page-node-id="4fQAeQvSPDu9qz3CyHu55Q">发表列表</a>
-      <a href="personal_CV.html" data-page-node-id="5hfXAqevYePUzeXJrDP0Qo">个人简历</a>
+    <nav class="nav-links">
+      <a href="index_zh.html" class="active">首页</a>
+      <a href="experiences_zh.html">经历</a>
+      <a href="portfolio_zh.html">作品集</a>
+      <a href="publications_zh.html">发表列表</a>
+      <a href="personal_CV.html">简历</a>
     </nav>
-    <div class="lang-switch" data-page-node-id="Dr5GPJDdNrXzojHID2FH3F">
-      <a href="index.html" data-page-node-id="nBGReX2MXGsBXvVpyQtGkW">EN</a>
-      <a href="index_zh.html" class="active" data-page-node-id="4hSQlt35xID23WlGvEEox3">中</a>
+    <div class="lang-switch">
+      <a href="index.html">EN</a>
+      <a href="index_zh.html" class="active">中</a>
     </div>
   </div>
 </header>
 
-<main class="container" id="top" data-page-node-id="AxmeN84f8EB8QKILadTvBV">
+<main class="container" id="top">
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" data-page-node-id="J1uL4SoAJkwjjsGmLI9hbB">
@@ -525,32 +45,53 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
     <div class="bio" data-page-node-id="duOBPho8WItnLwEjh8KP19">
       <h1 data-page-node-id="UjmABeSILngRfn7gOR0Gcd">黄云帆<span class="en-name" data-page-node-id="3wReIVvdFvY8XCQNi0KHK9">Yunfan Huang</span></h1>
       <p class="title-line" data-page-node-id="Umy2lLXF7831B0KemSli1Q">博士 · 工程力学系 · 清华大学</p>
-      <p class="tagline" data-page-node-id="9CjBM1EBQkd1ArwDzSCGPV">
-        研究兴趣聚焦于微纳尺度上跨学科的多物理水动力学输运，涵盖物理化学流体力学与电子流体力学。典型体系包括电解质溶液界面的电动现象，以及二维纯导体中的电子流体力学。研究兼取动理学理论与多尺度建模的视角，必要时辅以模拟和/或实验
-      </p>
-      <div class="disc-pills" data-page-node-id="zUESrmjO4847adItz525Eb">
-        <span class="disc" data-page-node-id="ASx8GS5AXav8CL0r6kuLTZ">Mechanics</span>
-        <span class="disc" data-page-node-id="0DG5IBzBfdESdYhGK2jWkb">Condensed Matter Physics</span>
-        <span class="disc" data-page-node-id="llvSGczj7lqpoCBZ2Bv7H3">Computational Physics</span>
-        <span class="disc" data-page-node-id="gLtV3j14GjUFHbLzJj0jHk">Mechanical Engineering</span>
-        <span class="disc" data-page-node-id="ID1CPPkCkq0U7iK9kWvKDH">Chemical Engineering</span>
-      </div>
-      <div class="contact-chips" data-page-node-id="hOJjOw64bqLHDhA90mVqum">
-        <a class="chip" href="mailto:yf-huang19@tsinghua.org.cn" data-page-node-id="qaa8yhcZySlBRRimKoAI59">yf-huang19@tsinghua.org.cn</a>
-        <a class="chip" href="https://scholar.google.com/citations?user=uXD8AFoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" data-page-node-id="MFHLG5y6Jj1b4kvlmSZDHK">Google Scholar</a>
-        <a class="chip" href="https://www.researchgate.net/profile/Yunfan-Huang" target="_blank" rel="noopener" data-page-node-id="4k9E0pcTtfg935uHFZq03n">ResearchGate</a>
+      <div class="bio-foot">
+        <div class="disc-pills" data-page-node-id="zUESrmjO4847adItz525Eb">
+          <span class="disc" data-page-node-id="ASx8GS5AXav8CL0r6kuLTZ">Mechanics</span>
+          <span class="disc" data-page-node-id="0DG5IBzBfdESdYhGK2jWkb">Condensed Matter Physics</span>
+          <span class="disc" data-page-node-id="llvSGczj7lqpoCBZ2Bv7H3">Computational Physics</span>
+          <span class="disc" data-page-node-id="gLtV3j14GjUFHbLzJj0jHk">Mechanical Engineering</span>
+          <span class="disc" data-page-node-id="ID1CPPkCkq0U7iK9kWvKDH">Chemical Engineering</span>
+        </div>
+        <div class="contact-chips" data-page-node-id="hOJjOw64bqLHDhA90mVqum">
+          <a class="chip" href="mailto:yf-huang19@tsinghua.org.cn" data-page-node-id="qaa8yhcZySlBRRimKoAI59">yf-huang19@tsinghua.org.cn</a>
+          <a class="chip" href="https://scholar.google.com/citations?user=uXD8AFoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" data-page-node-id="MFHLG5y6Jj1b4kvlmSZDHK">Google Scholar</a>
+          <a class="chip" href="https://www.researchgate.net/profile/Yunfan-Huang" target="_blank" rel="noopener" data-page-node-id="4k9E0pcTtfg935uHFZq03n">ResearchGate</a>
+        </div>
       </div>
     </div>
   </section>
+  <section class="section" id="research">
+    <div class="research-note">
+      <p class="rn-top">微纳尺度上跨学科的多物理水动力学输运</p>
 
-  <!-- ===================== RESEARCH ===================== -->
-  <section id="research" class="section" data-page-node-id="zAshSM22IM8CQf9ObQeu46">
-    <h2 data-page-node-id="oQxRqEUDC103T7anlLKbgc">研究兴趣</h2>
-    <p class="section-lead" data-page-node-id="L2SJyhZR7XdWrTGzv6Wn89">
-      围绕「多物理水动力学输运在多尺度上的协同」这一主题，沿五条方向展开
-    </p>
+      <div class="rn-fields">
+        <div class="rn-field rn-field-pch">
+          <div class="rn-fig"><img src="figs/research-pch.png" alt="物理化学流体力学：溶质浓度梯度驱动的界面附近流动"></div>
+          <div class="rn-field-name">物理化学流体力学</div>
+        </div>
+        <div class="rn-op">&#8745;</div>
+        <div class="rn-field rn-field-emhd">
+          <div class="rn-fig"><img src="figs/research-emhd.png" alt="电耦合流体力学：离子非均匀分布与电场对流体的反作用力"></div>
+          <div class="rn-field-name">电耦合流体力学</div>
+        </div>
+      </div>
 
-    <div class="research-grid" data-page-node-id="aj6KsyDDzD0xcjdUsZLya4">
+      <div class="rn-arrow"><svg width="16" height="22" viewBox="0 0 16 22" fill="none" aria-hidden="true"><path d="M8 0V16" stroke="currentColor" stroke-width="1.5"/><path d="M3 11L8 16L13 11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+      <div class="rn-systems">
+        <div class="rn-system">
+          <div class="rn-fig"><img src="figs/ek-interface.png" alt="电解质溶液界面的电动现象：界面带电与切向电动流动"></div>
+          <div class="rn-system-name">电解质溶液界面的电动现象</div>
+        </div>
+        <div class="rn-system">
+          <div class="rn-fig"><img src="figs/ehd-2d-conductor.png" alt="二维纯导体中的电子流体力学：粘性电子涡与电子-电子碰撞"></div>
+          <div class="rn-system-name">二维纯导体中的电子流体力学</div>
+        </div>
+      </div>
+    </div>
+
+<div class="research-grid" data-page-node-id="aj6KsyDDzD0xcjdUsZLya4">
       <div class="research-card" data-tag="PCH" data-page-node-id="nFkZ7CwTA2AlrdsdARzgUF">
         <div class="tag-label" data-page-node-id="mUVpHDyoGjXAQ9FdAOE19J">PCH</div>
         <div class="tag-full" data-page-node-id="XLA8Of9mlE6QMXYvUMHFel">微纳尺度的物理化学流体力学（如电动输运）</div>
@@ -573,525 +114,35 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
       </div>
     </div>
 
-    <div class="services" data-page-node-id="4c5SaFcfX4aT2GqtCtQlcV">
-      <h4 data-page-node-id="PCFAs3ojVoWclCIWHFcdvH">学术服务</h4>
-      担任审稿人：<i data-page-node-id="lD2NJSGnRbT0lDgOjC00XJ">Journal of Colloid and Interface Science</i> (2026-)
-    </div>
-
-    <div class="portfolio-block" data-page-node-id="VuFpyu5mUGmDeRAkxOBXPu">
-      <h4 data-page-node-id="SJMN1QKSRvlTYvkCTcoXDX">泛学术作品</h4>
-      <div class="portfolio-group" data-page-node-id="ZPBVkSCXQPf4LMCSqMiRpB">
-        <span class="group-title" data-page-node-id="8ceMSr9Hd2n82Sm8UxIEmx">物理图景</span>
-        <ul class="portfolio-list" data-page-node-id="D5XvAEgxdYy2cPEupU5ELo">
-          <li><span class="port-date">2024·12</span><span>复杂流体力学：从单一范式到交叉范式 <a href="./files/portfolios/Phys_0_Complex_hydrodyn_202412.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-          <li><span class="port-date">2024·01</span><span>传质学基础：Fick 定律及其拓展 <a href="./files/portfolios/Phys_1_Mass_transfer_tutorial_202401.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-          <li><span class="port-date">2024·06</span><span>水动力学输运：从分子到声子与电子 <a href="./files/portfolios/Phys_2_Hydrodynamic-transport_202406.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-          <li><span class="port-date">2024·06</span><span>电子流体力学多尺度建模：基于玻尔兹曼输运方程 <a href="./files/portfolios/Phys_3_BTE-based-multiscale-modeling-of-eHD_202406.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-          <li><span class="port-date">2025·05</span><span>电动多相流体力学多尺度建模：基于降阶模型 <a href="./files/portfolios/Phys_4_ROM-based-multiscale-modeling-of-EKmHD_202505.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-        </ul>
-      </div>
-      <div class="portfolio-group" data-page-node-id="watlo0FOdT395CyzGZvFs4">
-        <span class="group-title" data-page-node-id="CbojkzzDyXAC4ihx2oQEBb">学术人物</span>
-        <ul class="portfolio-list" data-page-node-id="OBhjNvbcC8ipAFhSbYTo1B">
-          <li data-page-node-id="Kk1UPnuD0pkGJHrrcXMQ5e"><span class="port-date" data-page-node-id="rzQ8a5SS236avnNrqZm40h">2016·11</span><span data-page-node-id="ZSK9xsip9FUTd9SDsLjYz3">学术之道：走近丘成桐先生 <a href="./files/portfolios/Fig_1_Shing-Tung_Yau_201611.pdf" target="_blank" rel="noopener" data-page-node-id="YK2szHN0pY3QBQE6LLeQ0T">PDF</a></span></li>
-          <li data-page-node-id="rw9Smyz3HXX8b06Cn5KSnY"><span class="port-date" data-page-node-id="zFwb92fMVCwtAcdxjbsUlS">2023·12</span><span data-page-node-id="zxBbGXka0DtpCuyhcfE5zn">拉尔斯·昂萨格：一场围绕对称性与结构的人生旅程 <a href="./files/portfolios/Fig_2_Lars_Onsager_202312.pdf" target="_blank" rel="noopener" data-page-node-id="iQBJcsJggXJb3lQ0Vem2sw">PDF</a></span></li>
-        </ul>
-      </div>
-      <div class="portfolio-group" data-page-node-id="lWqmGdSpkvXjztwVj4PHky">
-        <span class="group-title" data-page-node-id="7KqnIzrXbOnNaHs5csEjUO">科普介绍</span>
-        <ul class="portfolio-list" data-page-node-id="GjaZyLqB4e8gRQjxQanAj0">
-          <li><span class="port-date">2024·06</span><span>扫描栅极显微镜及其应用（文献调研） <a href="./files/portfolios/Post_1_Scanning_Gate_Microscopy_202406.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-          <li><span class="port-date">2024·08</span><span>液-液界面电动的溶剂混合与离子分配效应（会议胶片） <a href="./files/portfolios/Post_2_Partitioning-diffuse-effects-in-EKmHD_202408.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-          <li><span class="port-date">2024·11</span><span>渗透压的历史回顾与概念延申（点科普） <a href="./files/portfolios/Post_3_Osmotic_pressure_202411.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-          <li><span class="port-date">2024·12</span><span>液-液界面的电动输运简介（论文推送） <a href="./files/portfolios/Post_4_EKmHD_ITIES_overview_202412.pdf" target="_blank" rel="noopener">PDF</a></span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== EDUCATION & EXPERIENCE ===================== -->
-  <section id="education" class="section" data-page-node-id="2zJCp3oj2y3CY4a0oiUpSl">
-    <h2 data-page-node-id="SeM6r298Pv39tZ0bjRpYnE">教育经历</h2>
-
-    <div class="timeline" data-page-node-id="qnD99VISOUHke3lBQEmF2j">
-      <div class="timeline-item" data-page-node-id="FDr03QiudaFpZg4FXo4cEv">
-        <div class="timeline-year" data-page-node-id="kejRDW0qHHjNwA5zESnzAt">2019 — 2025</div>
-        <div class="timeline-title" data-page-node-id="PrR8v3ffRjLfIZEWuPCrFx">博士 / 工学 · 工程力学系，清华大学</div>
-        <div class="timeline-detail" data-page-node-id="acLnULGqavahlFUvHBbYDE">
-          <b data-page-node-id="cMDAoUWXGCbq5xCIe4tUEy">导师</b>：王沫然教授<br data-page-node-id="qjhPZFZvSnBwRZy1Cj2J0D">
-          <b data-page-node-id="d73lMy3fUDAl31KREvYQXz">论文</b>：液-液不混溶两相界面电动输运的机理研究
-          <a href="files/thesis/Dissertation_Doctor_EKmHD_online.pdf" target="_blank" rel="noopener" data-page-node-id="xjETEARukss875BbhAcqs0">主文档 PDF</a> / 
-          <a href="files/thesis/Dissertation_Doctor_EKmHD_supp_online.pdf" target="_blank" rel="noopener" data-page-node-id="9mq1l0HPFwwnzY8KBL82xI">补充材料</a>
-        </div>
-      </div>
-      <div class="timeline-item muted" data-page-node-id="ENM9UBdUGWuvsWDKxWR48P">
-        <div class="timeline-year" data-page-node-id="xAZrUpboUxbkFFMjxrXjgF">2015 — 2019</div>
-        <div class="timeline-title" data-page-node-id="QVCVl4BztWqBZyxsWQA3hj">本科 / 工学 · 工程力学（钱学森力学班），清华大学</div>
-        <div class="timeline-detail" data-page-node-id="nVxWsfWE5keo3BHcLQs29B">
-          <b data-page-node-id="drg3bAm2IEw6xF7oAG7Q6S">导师</b>：王沫然教授<br data-page-node-id="FGFcxpBE6TFf4Xy62XIo46">
-          <b data-page-node-id="COdGnWUUEKGqGxlGtm27tn">论文</b>：微纳尺度低维电子输运的水动力学研究
-          <a href="files/thesis/Thesis_Undergrad_eMHD_online.pdf" target="_blank" rel="noopener" data-page-node-id="lOJtcW9GSd8dGGarLiZhSW">主文档 PDF</a> /
-          <a href="files/thesis/Thesis_Undergrad_eMHD_supp_online.pdf" target="_blank" rel="noopener" data-page-node-id="TDGHi8AMgxojskwfDdAmFN">补充材料</a>
-        </div>
-      </div>
-    </div>
-
-    <h3 class="subsection-title" data-page-node-id="YXxOveC6j4gKdfhJHWARDB">泛教育经历</h3>
-    <div class="timeline" data-page-node-id="98Hi3A44QDoxO3sH3ZkqzH">
-      <div class="timeline-item" data-page-node-id="LMXbXLgUiPgzSWjYV8huSj">
-        <div class="timeline-year" data-page-node-id="meFXjF8HmmBUUfEHc259Mc">2021 — 2023 秋</div>
-        <div class="timeline-title" data-page-node-id="hUQMHlQ0UnSpl2JWai0Uq3">助教 · 传热学（英）</div>
-        <div class="timeline-detail" data-page-node-id="Bq23dEZe9l9Hl1ZE3oe2V4">王沫然教授，清华大学</div>
-      </div>
-      <div class="timeline-item muted" data-page-node-id="zTAXGACIhh33FDPoIDGSm2">
-        <div class="timeline-year" data-page-node-id="EOfTsXhCCGll3J4oz4xU2G">2018 秋</div>
-        <div class="timeline-title" data-page-node-id="nCLlYjuK4W30ojml2yFl2N">访问学生 · 机械工程系</div>
-        <div class="timeline-detail" data-page-node-id="Mcb9GkLBjDqlJLiXOBHneD">S.T. Wereley 教授，普渡大学（Purdue University）</div>
-      </div>
-      <div class="timeline-item muted" data-page-node-id="mU2YbrBwTHBVMYON5bKF4I">
-        <div class="timeline-year" data-page-node-id="ASpIFhpxL6r8X9TD5gt0EW">2018·07</div>
-        <div class="timeline-title" data-page-node-id="RQIR24OiJL2k3hNwACdI78">营员 · 空客创新夏令营</div>
-        <div class="timeline-detail" data-page-node-id="Yg89vsa0BH9jHOWSCYJp0v">从众多申请者中入选 40 人，克兰菲尔德大学（Cranfield University）</div>
-      </div>
-    </div>
-
-    <h3 class="subsection-title" data-page-node-id="KEJYPAyQYV9CxLtqojCPGI">荣誉奖励</h3>
-    <ul class="honors-list" data-page-node-id="ZF7pulZXBguh9oUMvH3a8X">
-      <li class="honor-item" data-page-node-id="zGfzCUQ4SGtbERZb8hgMBr"><span class="honor-year" data-page-node-id="R3n2XoVMF5jqPCOyGG2n9n">2025·06</span><span data-page-node-id="caWEKez4t2aq63HdlEFjSS">北京市优秀毕业生（博士）</span></li>
-      <li class="honor-item" data-page-node-id="DfdTL1xhLQiTvmnpmxNEwU"><span class="honor-year" data-page-node-id="mHCjlT5JXrjXZIDQzbOex4">2021·12</span><span data-page-node-id="m1mJL0MJcBCFUB2DZuraRG">清华大学研究生综合优秀奖一等奖（唐立新奖）</span></li>
-      <li class="honor-item" data-page-node-id="ZQsYIocpMnkmIepBF9mF7x"><span class="honor-year" data-page-node-id="tkUAI7vGfjJWiqRaY5mWBV">2019·07</span><span data-page-node-id="Qb6eruHvyZ9A9ti3TB0WMR">清华大学博士生"未来学者奖学金"</span></li>
-      <li class="honor-item" data-page-node-id="BpnbcFyv3bYsDXZdo4PcDT"><span class="honor-year" data-page-node-id="2YZzS1krGkwJIpx3ZR49mV">2019·07</span><span data-page-node-id="A5VvIUqBWX44g5AJT4eEX8">北京市普通高校优秀本科生毕业设计（论文）</span></li>
-      <li class="honor-item" data-page-node-id="UUGouYyRwMgDuU5PwrLvsR"><span class="honor-year" data-page-node-id="QUpnbC4Fm5ZIY3X59ww63X">2019·07</span><span data-page-node-id="o3zQpHLf7SV1YAxDmwQHMJ">清华大学本科生综合论文训练优秀论文</span></li>
-      <li class="honor-item" data-page-node-id="zZGYckDKnI0Yd5PLjoUdyD"><span class="honor-year" data-page-node-id="amslV61sPmKfCbVqg0jvzF">2019·07</span><span data-page-node-id="AiDWuYXwiQJozvmFGEYyBR">清华大学优良毕业生（本科）</span></li>
-      <li class="honor-item" data-page-node-id="lHQoADpNYRJRjTqearGT4m"><span class="honor-year" data-page-node-id="8HyZ5VaB9sjeY4x5PiMDhv">2016·10</span><span data-page-node-id="FGZ0haAFAjtViTAdrF864U">国家奖学金</span></li>
-      <li class="honor-item" data-page-node-id="Uf3U1ic2ipAIlbMMXkorGv"><span class="honor-year" data-page-node-id="s1vSYci11gXmlKyWtdEpAL">2015·10</span><span data-page-node-id="gXhoRlo15FoHWbqDtMI8nN">清华大学"拔尖创新人才培养计划"学堂班奖学金</span></li>
+    <h3 class="subsection-title">代表论文</h3>
+    <ul class="sel-list">
+          <li><div class="sel-title"><a href="./files/publications/[2025]-paper-APR-EKmHD-mthd-一作-main.pdf" target="_blank" rel="noopener" data-page-node-id="YJn0nwYPEYVuaND8Rk99aB">Electrokinetic multiphase hydrodynamics</a></div><span class="sel-journal"><em data-page-node-id="mHIqkhzLvlCerpLv8LSecY">Applied Physics Reviews</em>, <b data-page-node-id="Jh8u0ebWPgVWuVG0nVQ30c">12</b>: 031322, 2025</span></li>
+          <li><div class="sel-title"><a href="./files/publications/[2025]-paper-ACIS-EKmHD-phys-一作.pdf" target="_blank" rel="noopener" data-page-node-id="h5KbVrF75XThzzDzLTJmbt">Electrokinetics at liquid-liquid interfaces: Physical models and transport mechanisms</a></div><span class="sel-journal"><em data-page-node-id="mGghyFXZj8SEx9QnYHJRDV">Advances in Colloid and Interface Science</em>, <b data-page-node-id="86fFbPSE0d3rn4C3Z0zZs6">342</b>: 103518, 2025</span></li>
+          <li><div class="sel-title"><a href="./files/publications/[2024]-paper-PRF-MixPart-一作.pdf" target="_blank" rel="noopener" data-page-node-id="X8RY3n61tBut5j5Bsgpf8Y">Solvent mixing and ion partitioning effects in spontaneous charging and electrokinetic flow of immiscible liquid-liquid interface</a></div><span class="sel-journal"><em data-page-node-id="5mtyO11GqEmsPFJJJLoki4">Physical Review Fluids</em>, <b data-page-node-id="7gb85EB9TJTCFQwG0aJVlQ">9</b>: 103701, 2024</span></li>
+          <li><div class="sel-title"><a href="./files/publications/[2021]-paper-PRB-eMHD-一作.pdf" target="_blank" rel="noopener" data-page-node-id="04ngXKPDOYCZvCUX9CRUTY">Nonnegative magnetoresistance in hydrodynamic regime of electron fluid transport in two-dimensional materials</a></div><span class="sel-journal"><em data-page-node-id="AFVkLbATMuNcrwfS9Zu4IW">Physical Review B</em>, <b data-page-node-id="N3Fgdhzf2CroRwsIFAAT2I">104</b>: 155408, 2021</span></li>
+          <li><div class="sel-title"><a href="./files/publications/[2025]-paper-JFM-EC-二作.pdf" target="_blank" rel="noopener" data-page-node-id="tPseVPB9vK9BkzTQIA0cqf">Flow instability and scaling transition near strongly polarised surfaces</a></div><span class="sel-journal"><em data-page-node-id="gosEJyxI1to1NKEbLjYtcD">Journal of Fluid Mechanics</em>, <b data-page-node-id="YnKb3u2CY0YTnVEm4sFrUA">1024</b>: A8, 2025</span></li>
     </ul>
+    <a class="view-all" href="publications_zh.html">查看全部发表列表 →</a>
   </section>
-
-  <!-- ===================== PUBLICATIONS ===================== -->
-  <section id="publications" class="section" data-page-node-id="QYstxWc6xBPPFYA1NLLMQC">
-    <h2 data-page-node-id="NksZQoR1P2fV5wvDLxlN6b">发表列表</h2>
-    <p class="section-lead" data-page-node-id="HwhlR6V7LOuo3bRWFVpqzn">
-      含已发表论文、预印本及代表性会议报告
-    </p>
-
-    <div class="pub-filters" role="toolbar" aria-label="按研究方向筛选发表" data-page-node-id="X6DAXeddhF7zw4ywFCqtbE">
-      <button class="filter-btn active" data-filter="all" data-page-node-id="O4WG2eYwsGs229c2KazG2B">全部</button>
-      <button class="filter-btn" data-filter="SEL" data-page-node-id="rrGizj5FL9q0dL57jEtVxY">代表作×5</button>
-      <button class="filter-btn" data-filter="PCH" data-page-node-id="OEPxw2AwNV3hfFCEztKRXG">PCH</button>
-      <button class="filter-btn" data-filter="QH" data-page-node-id="DxHFQHujhYFqZIyALYSLpH">QH</button>
-      <button class="filter-btn" data-filter="AM" data-page-node-id="znP2EBgRT6kYpcZyaLDbBK">AM</button>
-      <button class="filter-btn" data-filter="CF" data-page-node-id="kUpcAqf0eB1UkK9ENnGbT7">CF</button>
-      <button class="filter-btn" data-filter="MS" data-page-node-id="sgOcUBAf2FCXyxDrqVnleM">MS</button>
-    </div>
-
-    <h3 class="subsection-title" data-page-node-id="RrTuDXePpBBczQrIviLkSS">综述论文</h3>
-    <div class="pub-list" data-page-node-id="Tzkg3WHsv7pPaIQcx1fGNU">
-      <article class="pub-card" data-tag="PCH" data-page-node-id="JDiEZFWTYIE0CUGarePpet">
-        <div class="pub-meta" data-page-node-id="sPRH4dMDT4OZgA8CbTzdGf">
-          <span class="tag tag-PCH" data-page-node-id="AIhFpZ7JrJio60MdgL5jgs">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="K0j15qDRR1wcDlDq6ELTMi">综述</span>
-        </div>
-        <div data-page-node-id="XKwDyybpn7RH5115Zr0ACi">
-          <p class="pub-title" data-page-node-id="TABx6uUCW2YRBHeAd5K7dR"><a href="./files/publications/[2025]-paper-ACIS-EKporous-一作.pdf" target="_blank" rel="noopener" data-page-node-id="4SYDVMGzwGe2XfWzFBcaOf">Electrokinetic transport in saturated and unsaturated porous media: A pore-scale view</a></p>
-          <p class="pub-authors" data-page-node-id="IYMLQml50k7G5yoA1E5WHv"><b data-page-node-id="GEzL9c0EM6Rmxuf1Mil5Am">Y.F. Huang</b>, Z.G. Tian, H.Y. Chen, W. Liu and M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="nvl2wgsSPCAPJAl2UqNA37"><em data-page-node-id="h5LqUhnwachANMVuagfCar">Advances in Colloid and Interface Science</em>, <b data-page-node-id="mkOEBQMgtctp0bSnG8d2zB">349</b>: 103755, 2026</p>
-        </div>
-        <div class="pub-year" data-page-node-id="8uHrHAyJ4CoRc1kXKKE9P0">2026</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH SEL" data-page-node-id="tS1cfR1dCAQPSwBUcFK8KX">
-        <div class="pub-meta" data-page-node-id="3Dh5r5XBv2eSxpJ3PnIeHD">
-          <span class="tag tag-PCH" data-page-node-id="XRdhpTMWUQH1DbNcLUAjtt">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="TGBEdQtJi7rsRauosCnNIV">综述</span>
-        </div>
-        <div data-page-node-id="GC8atloaCfsL9pBJsHNSCe">
-          <p class="pub-title" data-page-node-id="oj1Ur7EDBJCiLwwSemPxeF"><a href="./files/publications/[2025]-paper-APR-EKmHD-mthd-一作-main.pdf" target="_blank" rel="noopener" data-page-node-id="YJn0nwYPEYVuaND8Rk99aB">Electrokinetic multiphase hydrodynamics</a></p>
-          <p class="pub-authors" data-page-node-id="MyJR3ggBaMSed1xDKEmols"><b data-page-node-id="PBmMX7tYc4R6Rgq7e6iS8H">Y.F. Huang</b> and M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="z2UlaU5AzoHEbOXdY3MBej"><em data-page-node-id="mHIqkhzLvlCerpLv8LSecY">Applied Physics Reviews</em>, <b data-page-node-id="Jh8u0ebWPgVWuVG0nVQ30c">12</b>: 031322, 2025</p>
-        </div>
-        <div class="pub-year" data-page-node-id="3AYiFmCV26seykOIBgGubL">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH SEL" data-page-node-id="ReakBcbAmgG4D8MOcEy7vv">
-        <div class="pub-meta" data-page-node-id="HX4oQpVMgxWEmYMpmdlCmD">
-          <span class="tag tag-PCH" data-page-node-id="RmRndbbDw5PeBv2Onx4KJQ">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="59sPubNXa2qcDCnc0bO3iN">综述</span>
-        </div>
-        <div data-page-node-id="9R5NKi2fvuiq5y5lK9ViTe">
-          <p class="pub-title" data-page-node-id="5Gkar576BwMqIW6eBE5oCh"><a href="./files/publications/[2025]-paper-ACIS-EKmHD-phys-一作.pdf" target="_blank" rel="noopener" data-page-node-id="h5KbVrF75XThzzDzLTJmbt">Electrokinetics at liquid-liquid interfaces: Physical models and transport mechanisms</a></p>
-          <p class="pub-authors" data-page-node-id="hDAl8IIKAtfBIm952GXspL"><b data-page-node-id="BlfzZCHCw206FBp0BMrmAR">Y.F. Huang</b> and M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="ocI3oWASxkZDq0WJBuEeEe"><em data-page-node-id="mGghyFXZj8SEx9QnYHJRDV">Advances in Colloid and Interface Science</em>, <b data-page-node-id="86fFbPSE0d3rn4C3Z0zZs6">342</b>: 103518, 2025</p>
-        </div>
-        <div class="pub-year" data-page-node-id="kCfzpv3kHU6ZqB6hJxLaxb">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH" data-page-node-id="u4zU8tfGk9plRdExVmSJVT">
-        <div class="pub-meta" data-page-node-id="vuPatzUUQOZL11BoF7Mfvx">
-          <span class="tag tag-PCH" data-page-node-id="RAIi7ktAlTcxoujGLXUskq">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="OTMSzMdrY5virjKUzNU4KH">综述</span>
-          <span class="tag tag-cn" data-page-node-id="AgaF3Vq1sl7lrnqphVtoJB">中文</span>
-        </div>
-        <div data-page-node-id="APVQbGpBFRTxGnESxNsVyu">
-          <p class="pub-title" data-page-node-id="Az0uv6HJNbuGDrmcxAjfKj"><a href="./files/publications/[2025]-paper-CJTAM-EKmHD-app-一作.pdf" target="_blank" rel="noopener" data-page-node-id="s7bjqgzctee9CQKqhEhAxT">电动多相流体力学：机理与应用</a></p>
-          <p class="pub-authors" data-page-node-id="AXkbj2T9PGg0QYEWdjUugW"><b data-page-node-id="Fi3SVOroEJ7r7LWWEVYEhy">黄云帆</b>，王沫然*</p>
-          <p class="pub-journal" data-page-node-id="CauX2EIitqLCHYikgVElXm"><em data-page-node-id="w2TuTe8tG2Pwy9sPyG9b3K">力学学报</em>, <b data-page-node-id="L0fiG4luhxK1HJq3MPOFak">57</b>: 2680, 2025</p>
-        </div>
-        <div class="pub-year" data-page-node-id="aHWBv90tF1Zj2guYJ7V42a">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="QH" data-page-node-id="mnKqxDDD0H5F1X6IvqSN08">
-        <div class="pub-meta" data-page-node-id="uF8wAZePbgQM0rq8GR8kao">
-          <span class="tag tag-QH" data-page-node-id="hnZRk1IO9j1XE2U3sg6Vpv">QH</span>
-          <span class="tag tag-extra" data-page-node-id="e5ALRGG64qtb4UyO3Dy9JW">综述</span>
-          <span class="tag tag-cn" data-page-node-id="37l77Zt7xRXNVowNTFul8b">中文</span>
-        </div>
-        <div data-page-node-id="NHIVX5hHDipBZiEZFdTMuc">
-          <p class="pub-title" data-page-node-id="IVORL4TE5rEHkXD9AsUsME"><a href="./files/publications/[2024]-paper-CJCP-NanoPhonon-二作.pdf" target="_blank" rel="noopener" data-page-node-id="Wab736y1JVMOBnhPqt8Ikr">纳尺度热传导中声子波动行为的物理及建模</a></p>
-          <p class="pub-authors" data-page-node-id="kTp5q02KhjLVEVQ7A3CAEV">刘彬，<b data-page-node-id="zIzCIifcNYtUjzcUQbqCoz">黄云帆</b>，王沫然*</p>
-          <p class="pub-journal" data-page-node-id="1BCjWeqmoMSQ4tbsyt17NQ"><em data-page-node-id="d4u9YzOY7iQUMXuIsjnQV7">计算物理</em>, <b data-page-node-id="XaZ1bl7nroCT48o4qpS9yl">41</b>: 746, 2024</p>
-        </div>
-        <div class="pub-year" data-page-node-id="pZtrtzNbwXZuKyUw1R7wsF">2024</div>
-      </article>
-    </div>
-
-    <h3 class="subsection-title" data-page-node-id="Ue1rRuUlZa1Ii3GCPIY81M">研究论文（一作 / 共一）</h3>
-    <div class="pub-list" data-page-node-id="KO5cebFQkudpbRhZi8ABXK">
-      <article class="pub-card" data-tag="PCH" data-page-node-id="eeeDH7PFFC0eFCDdYYiCQh">
-        <div class="pub-meta" data-page-node-id="RaSKMLJnCEitHk4uXHF1Y9">
-          <span class="tag tag-PCH" data-page-node-id="12wd3pr0mZRCZevLONcKbs">PCH</span>
-        </div>
-        <div data-page-node-id="T4AXMkT1aVs4kVEFi0CVq7">
-          <p class="pub-title" data-page-node-id="IpKHZSz9e7JCPBn12rfD1A"><a href="./files/publications/[2026]-paper-EP-dEP-一作.pdf" target="_blank" rel="noopener" data-page-node-id="FNvcAEBDBgsDifsD5A0cHD">Electrophoresis of charged dielectric droplet with ion concentration polarization effect</a></p>
-          <p class="pub-authors" data-page-node-id="cU2mvDYQENdfhwRfwizelt"><b data-page-node-id="14MXQIA0jIxKkGYFmvYmyC">Y.F. Huang</b> and M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="OFugQbWluEB1BsjxEHQxdC"><em data-page-node-id="5ddVQIVpb0AbM6CWvsMCXA">ELECTROPHORESIS</em>, <b data-page-node-id="y1FHDqfSUGn2pWIQNnqKgR">47</b>: 724–743, 2026</p>
-        </div>
-        <div class="pub-year" data-page-node-id="qSCT8H3X1ZsnMzhVbQWKqF">2026</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH" data-page-node-id="MaFXp1oeLTYlDgN2auhGX7">
-        <div class="pub-meta" data-page-node-id="B0m3biwxdC2XtJGJt0NFVT">
-          <span class="tag tag-PCH" data-page-node-id="tYDm1hAyrrG1the9PEWMY9">PCH</span>
-        </div>
-        <div data-page-node-id="qVc0lrFtT3sdlbDahSC3Sq">
-          <p class="pub-title" data-page-node-id="js5ljiGy6LDzUlIlxXTqsq"><a href="./files/publications/[2026]-paper-PRF-tlStrip-一作.pdf" target="_blank" rel="noopener" data-page-node-id="GNfbRfKP1GLhHkCsHwLrNp">Electrokinetic transport regulation at liquid-infused surface by liquid depletion and ion partition</a></p>
-          <p class="pub-authors" data-page-node-id="p1FS0ydk39oPuHaLjLYFCK"><b data-page-node-id="vddpRi9IhCLkGLZqmBvx9W">Y.F. Huang</b> and M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="4GdPQcqgrLvj9qwQ1ztAIc"><em data-page-node-id="lPXjGtq0d7ObxFnmpRauvA">Physical Review Fluids</em>, <b data-page-node-id="kScYGxwuEdDgGCSEDPoxcd">6</b>: 063702, 2026</p>
-        </div>
-        <div class="pub-year" data-page-node-id="piMhayWiJAsapi5eEUU1eI">2026</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH SEL" data-page-node-id="w3D4RxXKq8l2cVpLrNPBYY">
-        <div class="pub-meta" data-page-node-id="JVBIcBuYHvNBeKZwHLhObn">
-          <span class="tag tag-PCH" data-page-node-id="oTfEXhaBzBJeMINS4T3VbQ">PCH</span>
-          <span class="tag tag-highlight" data-page-node-id="eEYO9dUYzGqh0Oa0M1gVM1">★ 编辑推荐</span>
-        </div>
-        <div data-page-node-id="j4bo6MKaUmxY5rxSnLHVhn">
-          <p class="pub-title" data-page-node-id="GutReEA5j3Og2PERT5MUEV"><a href="./files/publications/[2024]-paper-PRF-MixPart-一作.pdf" target="_blank" rel="noopener" data-page-node-id="X8RY3n61tBut5j5Bsgpf8Y">Solvent mixing and ion partitioning effects in spontaneous charging and electrokinetic flow of immiscible liquid-liquid interface</a></p>
-          <p class="pub-authors" data-page-node-id="AOeWc9Ly2jio4RcnnA6oad"><b data-page-node-id="A58IlbBotu3XZFIsElDQOK">Y.F. Huang</b> and M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="G5ndRyC51ZvHCPQliPgYNA"><em data-page-node-id="5mtyO11GqEmsPFJJJLoki4">Physical Review Fluids</em>, <b data-page-node-id="7gb85EB9TJTCFQwG0aJVlQ">9</b>: 103701, 2024</p>
-        </div>
-        <div class="pub-year" data-page-node-id="oXUoeeuHPkn1RUfFOucsBs">2024</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH" data-page-node-id="KYiiLU7v5QrBlt7AJCDprO">
-        <div class="pub-meta" data-page-node-id="veDEUXYSWhqJXcOMZdjxiS">
-          <span class="tag tag-PCH" data-page-node-id="lQ0XOpVaiexVClcLs4NPdh">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="vVA91rWK8k5sKRErkhWkCJ">共一</span>
-        </div>
-        <div data-page-node-id="MKSCGAqkHAGwW7ervkWd3D">
-          <p class="pub-title" data-page-node-id="fNDPRf9fggqOlLYy8t2vmK"><a href="./files/publications/[2023]-paper-IJMS-EKmHD-exp-共一.pdf" target="_blank" rel="noopener" data-page-node-id="Rp70xWcmAu85xUstaNJIar">A streaming-potential-based microfluidic measurement of surface charge at immiscible liquid-liquid interface</a></p>
-          <p class="pub-authors" data-page-node-id="DblWnTRBAAVNJrsvBhCws1">A. Alizadeh<sup data-page-node-id="9e03HdBepLqOKIOvfAo1oI">#</sup>, <b data-page-node-id="CurXkvfhK1Ewk8eYJ5Hk2a">Y.F. Huang</b><sup data-page-node-id="gcWxjChp58qCtJFCSbeTL7">#</sup>, F.L. Liu, H. Daiguji, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="8vYYhoHSYxAQeaNOt2qdrr"><em data-page-node-id="GxjhHnNTzmewE95eWJiyFQ">International Journal of Mechanical Sciences</em>, <b data-page-node-id="FkaHYVFFijlJmBTWQu2l90">247</b>: 108200, 2023</p>
-        </div>
-        <div class="pub-year" data-page-node-id="2h0csCk0Y6HhbVkb8n1c9j">2023</div>
-      </article>
-
-      <article class="pub-card" data-tag="QH" data-page-node-id="7TCHpJ0QOr4Qjwc6pdzsyM">
-        <div class="pub-meta" data-page-node-id="ZdiUY8xzjiiGxFpYHGxVxm">
-          <span class="tag tag-QH" data-page-node-id="wIBmS9QymISf6U1aRzP323">QH</span>
-          <span class="tag tag-extra" data-page-node-id="6PsGZMhXkd1hgHdMMUBGyb">共一</span>
-        </div>
-        <div data-page-node-id="pF1KuMYt0yT8h39JS5cc4q">
-          <p class="pub-title" data-page-node-id="sbjDkxGZD0Aceg4FOHalnd"><a href="./files/publications/[2023]-paper-IJHMT-MC-DOM-共一.pdf" target="_blank" rel="noopener" data-page-node-id="E4OB7CeHYilT8HKHfIX6fD">A hybrid Monte Carlo-discrete ordinates method for phonon transport in micro/nanosystems with rough interfaces</a></p>
-          <p class="pub-authors" data-page-node-id="1DWGIE9isoPuBPmcf2YBsL">X. Ran<sup data-page-node-id="cSg5YssECjVTqZGUz5kDhv">#</sup>, <b data-page-node-id="04HVHB6hHA0aVoLjst71fB">Y.F. Huang</b><sup data-page-node-id="qoxg6CK9875nWA8du7xhUM">#</sup>, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="rLRXL7JbBIrSpimq6Zb9Oe"><em data-page-node-id="9rgmrqDyWh8WXgTp4XBB2w">International Journal of Heat and Mass Transfer</em>, <b data-page-node-id="q8sGHwdodpGLoVpzSRwdFZ">201</b>: 123634, 2023</p>
-        </div>
-        <div class="pub-year" data-page-node-id="1lo97JBAUgkvF0irGf1qZX">2023</div>
-      </article>
-
-      <article class="pub-card" data-tag="QH SEL" data-page-node-id="TytAQewFgO2gJU1DUGrpdD">
-        <div class="pub-meta" data-page-node-id="TbgFHW5bQpvWFImulbH5Dw">
-          <span class="tag tag-QH" data-page-node-id="51YELz4zmrb0lau5aN9RWU">QH</span>
-        </div>
-        <div data-page-node-id="7aOmdM31af9O12cMMhRXQr">
-          <p class="pub-title" data-page-node-id="lv8wBfBmvk3y564O8YPAi1"><a href="./files/publications/[2021]-paper-PRB-eMHD-一作.pdf" target="_blank" rel="noopener" data-page-node-id="04ngXKPDOYCZvCUX9CRUTY">Nonnegative magnetoresistance in hydrodynamic regime of electron fluid transport in two-dimensional materials</a></p>
-          <p class="pub-authors" data-page-node-id="ucvr8DJ7KNgmbbQSVWzMm5"><b data-page-node-id="jJylMo28Q295CbeLNs4D1b">Y.F. Huang</b> and M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="vbRxFaxa4Dnql50ZWZMqLd"><em data-page-node-id="AFVkLbATMuNcrwfS9Zu4IW">Physical Review B</em>, <b data-page-node-id="N3Fgdhzf2CroRwsIFAAT2I">104</b>: 155408, 2021</p>
-        </div>
-        <div class="pub-year" data-page-node-id="vNHUdET52oxpIcAbnw9eUF">2021</div>
-      </article>
-
-      <article class="pub-card" data-tag="MS" data-page-node-id="YceistwtZxt00oa5wBgOvz">
-        <div class="pub-meta" data-page-node-id="Gz0Fwv8u1IsgmGMVvRHXVR">
-          <span class="tag tag-MS" data-page-node-id="3BrugFFq52OM5MGuKQAwBc">MS</span>
-          <span class="tag tag-cn" data-page-node-id="KEz33GY1WDRxgj7nhHbq1u">中文</span>
-        </div>
-        <div data-page-node-id="w7mUv6rCsnZgUbOHiCoYNZ">
-          <p class="pub-title" data-page-node-id="bHNFpPfix8Qzyeh8l3ih37"><a href="./files/publications/[2024]-paper-LXYSJ-HMT-LieG-一作.pdf" target="_blank" rel="noopener" data-page-node-id="MIwlzBIR0hLFX8PE3fASWJ">力学与数理融合：浅谈相似性解方法</a></p>
-          <p class="pub-authors" data-page-node-id="11xukBkrjZxIBsstmt80CC"><b data-page-node-id="cUmdFRsLe4PiXWx2gIKODG">黄云帆</b>，王沫然*</p>
-          <p class="pub-journal" data-page-node-id="PPVkwCYVX0tZyGdN2fy5wf"><em data-page-node-id="sBrrFZEp3JFIYICmAkC58m">力学与实践</em>, <b data-page-node-id="lexckTh1rIbdNUEMiYigwW">46</b>: 868, 2024</p>
-        </div>
-        <div class="pub-year" data-page-node-id="OuBwZsdig4AKyW3udfUhcp">2024</div>
-      </article>
-
-      <article class="pub-card" data-tag="MS" data-page-node-id="tuGIhRbyxO2N8Yj6AmXJR5">
-        <div class="pub-meta" data-page-node-id="yRrPHuT1ddR2OeELkOWnpp">
-          <span class="tag tag-MS" data-page-node-id="1ZFJJkgksLLoAPn31F7Wan">MS</span>
-          <span class="tag tag-cn" data-page-node-id="276LkpR6K6eeKuoonKM3nc">中文</span>
-        </div>
-        <div data-page-node-id="9YzOIlIVOtr4Qi680rDzLv">
-          <p class="pub-title" data-page-node-id="5vwbU7JH5kViLMNZoqSn1b"><a href="./files/publications/[2017]-paper-LXYSJ-GRB-一作.pdf" target="_blank" rel="noopener" data-page-node-id="h70PdvGfVCdHHTHOPvdaPS">平面运动刚体两类瞬心轨迹之间关系的探讨</a></p>
-          <p class="pub-authors" data-page-node-id="9oKrCqYudLkNknJJXaPI4S"><b data-page-node-id="BWQ7RcBmzleZxeOKpi2QCt">黄云帆</b></p>
-          <p class="pub-journal" data-page-node-id="dgYX7NkmAYJBobVvYUvjAg"><em data-page-node-id="qEJmqmBtHul86A5lY5FVY1">力学与实践</em>, <b data-page-node-id="dJIQx8NJ4vvp834dWgcRBQ">3</b>: 306, 2017</p>
-        </div>
-        <div class="pub-year" data-page-node-id="hxLitTweTopDQjOO27TqPM">2017</div>
-      </article>
-    </div>
-
-    <h3 class="subsection-title" data-page-node-id="jJl7uAXEWfRhz5Sh6XVHsW">研究论文（其他作者）</h3>
-    <div class="pub-list" data-page-node-id="fO4w67KPh0XHwK3gLQd74A">
-      <article class="pub-card" data-tag="PCH SEL" data-page-node-id="bsUFqW9kLUUZUv8mvHG6Su">
-        <div class="pub-meta" data-page-node-id="U0DP7ptoMzlRHFW85XGux0">
-          <span class="tag tag-PCH" data-page-node-id="RZpNZOtZZvbGGqTsLy3Hh5">PCH</span>
-        </div>
-        <div data-page-node-id="vBQZj0CBaDkrbbk64kvGnT">
-          <p class="pub-title" data-page-node-id="jKa2FnREgiduSyTfN4m37n"><a href="./files/publications/[2025]-paper-JFM-EC-二作.pdf" target="_blank" rel="noopener" data-page-node-id="tPseVPB9vK9BkzTQIA0cqf">Flow instability and scaling transition near strongly polarised surfaces</a></p>
-          <p class="pub-authors" data-page-node-id="T0NITZwdHTXS1A62pYxAba">W. Liu, <b data-page-node-id="3roounJCWlhSAfE0sj38as">Y.F. Huang</b>, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="agbwzXC9PV5SEULN7prVMw"><em data-page-node-id="gosEJyxI1to1NKEbLjYtcD">Journal of Fluid Mechanics</em>, <b data-page-node-id="YnKb3u2CY0YTnVEm4sFrUA">1024</b>: A8, 2025</p>
-        </div>
-        <div class="pub-year" data-page-node-id="piEjO4ZPNb3B22OGQRsMr7">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="CF" data-page-node-id="FEU9HhvWbdEMKU4MKba4g3">
-        <div class="pub-meta" data-page-node-id="z0tHc1hE8AFw0lBZMf9tWV">
-          <span class="tag tag-CF" data-page-node-id="XQ2jmcZ3jiFekw8tLDBNzW">CF</span>
-        </div>
-        <div data-page-node-id="md4iLsLWaXx0MzOVjmBjEf">
-          <p class="pub-title" data-page-node-id="NuMZQ6yWkvO5GBZ6gbWngF"><a href="./files/publications/[2025]-paper-PRF-MPD-四作.pdf" target="_blank" rel="noopener" data-page-node-id="BBCPntrOKiojbhbOLYCNit">Geometry-mediated particle accumulation driven by nonhydrodynamic viscosity effect with flow control implications in porous media</a></p>
-          <p class="pub-authors" data-page-node-id="WOIi5R01aMq4Z7lDAgs5Gm">X.K. Lu, Q.Q. Li, G. Yang, <b data-page-node-id="xaLQf0VRWq9yEQBwYNyx9P">Y.F. Huang</b>, W.H. Lei, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="qXJlSOPkmxeLJAbp4uEk5E"><em data-page-node-id="gvCCoyy80Hminhri1wgI4y">Physical Review Fluids</em>, <b data-page-node-id="dCmn6JIEcUx8MbiQK0wWie">10</b>: 093304, 2025</p>
-        </div>
-        <div class="pub-year" data-page-node-id="sUqyQMqAVcUvGOoDlbcwp5">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="MS" data-page-node-id="sRA9b2G6r1k4TRFE49nXpi">
-        <div class="pub-meta" data-page-node-id="G99rpGQDrlvVGdXnhONIxE">
-          <span class="tag tag-MS" data-page-node-id="FKFD33kq0dglHRzaAl1WNC">MS</span>
-        </div>
-        <div data-page-node-id="Inb7Nw0CgyViKnVJGMIagG">
-          <p class="pub-title" data-page-node-id="HiAKCM0lnHcvrXW3movjcQ"><a href="./files/publications/[2025]-paper-PRF-GFR-三作.pdf" target="_blank" rel="noopener" data-page-node-id="wc7dn5UgSw31C4KitGPWoc">Gas flow regimes and transition criteria in porous media</a></p>
-          <p class="pub-authors" data-page-node-id="gvGfHTWAottfluPTotXU3f">M.B. Zhang, Z.G. Tian, <b data-page-node-id="BB72PA1vJuvZ1rWgbqLXcK">Y.F. Huang</b>, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="TPxp9G8UZT2ysTbvPw4hSm"><em data-page-node-id="oeIJhXb4uMbz47w4nCRONg">Physical Review Fluids</em>, <b data-page-node-id="uEaCwIwilDAhxWtu7AN0SG">10</b>: 024303, 2025</p>
-        </div>
-        <div class="pub-year" data-page-node-id="bC5UcCeLnHiAEKjrsbkF6H">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH" data-page-node-id="ussBs0RUhLxDIEpdz6NGHN">
-        <div class="pub-meta" data-page-node-id="BIAU9lRto91pXSYq5P0G57">
-          <span class="tag tag-PCH" data-page-node-id="FmkoDsNt0FV4VplEYK0ncb">PCH</span>
-        </div>
-        <div data-page-node-id="QBsGpTDm00RmYanSCD5LSw">
-          <p class="pub-title" data-page-node-id="HO5qofd5tGTwwykCCnxsbh"><a href="./files/publications/[2025]-paper-IJMS-ESC-二作.pdf" target="_blank" rel="noopener" data-page-node-id="9VyHOdGZft6sffa7eIKjuY">Extended space charge and transport near ion-selective surfaces</a></p>
-          <p class="pub-authors" data-page-node-id="7sWrJvenNSuMr0xll3A1F6">W. Liu, <b data-page-node-id="3SF4XmprROa9yJeNSxv2Nn">Y.F. Huang</b>, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="Vk1A7kTLbs31IB2JBP8yL7"><em data-page-node-id="hm160GPfmCqlpwZ3Aiibcq">International Journal of Mechanical Sciences</em>, <b data-page-node-id="sKMlpx9lhBAwv3UCZ6e2hZ">287</b>: 109933, 2025</p>
-        </div>
-        <div class="pub-year" data-page-node-id="W2olrVDwaF12TWIdAaFDQW">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="MS" data-page-node-id="aJuXKiamEfgX9AnOWGrbdH">
-        <div class="pub-meta" data-page-node-id="phE6hB1lk7xA5jRY3Mp6rC">
-          <span class="tag tag-MS" data-page-node-id="B7o2jdWuGtnvBSw9oWef6m">MS</span>
-        </div>
-        <div data-page-node-id="uwk9uAFtR77tfGpBHpjTYs">
-          <p class="pub-title" data-page-node-id="j48uzcMkWYsqeSykSaY6xk"><a href="./files/publications/[2024]-paper-PRF-NDF-二作.pdf" target="_blank" rel="noopener" data-page-node-id="bCJ2o624BQVJECvGgX2E1h">Analytical solution of inertia effect in high-speed flows through disordered porous media</a></p>
-          <p class="pub-authors" data-page-node-id="CHLxQpTk0wslJXEheSljil">Z.G. Tian, <b data-page-node-id="Z0IZqXZAoDff8rTHdVhWk3">Y.F. Huang</b>, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="enUTJiGz1CdY87HfKKsSrJ"><em data-page-node-id="dFcM3CzH3omD2h56VMHttS">Physical Review Fluids</em>, <b data-page-node-id="0Xq1LtkneKrcPDYGx5gNig">9</b>: L102101, 2024</p>
-        </div>
-        <div class="pub-year" data-page-node-id="oHe3rfnOOAon9OHI5CeefD">2024</div>
-      </article>
-
-      <article class="pub-card" data-tag="CF" data-page-node-id="FFULCvF0CId1G0ipX4BDaK">
-        <div class="pub-meta" data-page-node-id="Qnot1ou0oC9GIMGkavRDKu">
-          <span class="tag tag-CF" data-page-node-id="L7WLqPRZm3eGrnE6zFQhWA">CF</span>
-        </div>
-        <div data-page-node-id="33ujtWEoe1YYRzdDes6Fzg">
-          <p class="pub-title" data-page-node-id="MQxvdFRIWyNnp5DYS5aM4I"><a href="./files/publications/[2024]-paper-IJMS-TFM-三作.pdf" target="_blank" rel="noopener" data-page-node-id="9NbHADWhcQxfSQ6crhAOK7">Lattice Boltzmann method for particulate multiphase flow system</a></p>
-          <p class="pub-authors" data-page-node-id="DD7CyjDfPaXtRVOY1hKVIO">Q.Q. Li, G. Yang, <b data-page-node-id="EhZIwvgrMNu4EwcMzatbkN">Y.F. Huang</b>, X.K. Lu, J. Min, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="MkY9MOpAeGo3j9mSdA3IuW"><em data-page-node-id="uaolbenrh2TBq8ekJfp3Nu">International Journal of Mechanical Sciences</em>, <b data-page-node-id="Woz8WAZR9T5cfKe9N2rHWX">273</b>: 109217, 2024</p>
-        </div>
-        <div class="pub-year" data-page-node-id="QX0tslcntgLEHrmk4Exa09">2024</div>
-      </article>
-
-      <article class="pub-card" data-tag="CF" data-page-node-id="5B8r7HP6bQ8d0dyKRQmPC1">
-        <div class="pub-meta" data-page-node-id="TebzNh7oA151WnC2MS5ISg">
-          <span class="tag tag-CF" data-page-node-id="cHfQRa0kFEYJR7wIOFaT3H">CF</span>
-        </div>
-        <div data-page-node-id="bvloZDnjIdzwCtj0y49DPb">
-          <p class="pub-title" data-page-node-id="7WbB66MGBtcIRLeM5I67zd"><a href="./files/publications/[2023]-paper-Langmuir-NP-二作.pdf" target="_blank" rel="noopener" data-page-node-id="jA9KFqzz2AjSDgjOe8L7UA">Criterions of distribution transitions in dispersed multiphase systems based on an extended lattice model</a></p>
-          <p class="pub-authors" data-page-node-id="9MDPZ54LGCyXY5tIu7WwXj">Y.R. Li, <b data-page-node-id="A5QYXK2RBw2411SfFMPs7P">Y.F. Huang</b>, X.K. Lu, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="Cw0Y2xabUndDlisHgPPEPi"><i data-page-node-id="3J7wRC2vCZXPC7YKkx3mSH">Langmuir</i>, <b data-page-node-id="NxkBX2m6wopkDfWLiwm94Y">39</b>: 17021, 2023</p>
-        </div>
-        <div class="pub-year" data-page-node-id="D3sC99pS1E0VlHxnFh7Vgl">2023</div>
-      </article>
-    </div>
-
-    <h3 class="subsection-title" data-page-node-id="P7vTHYZ4JMx3RaayF2Alth">会议报告</h3>
-    <div class="pub-list" data-page-node-id="sjARMuYbuAgADGuw6WUGb9">
-      <article class="pub-card" data-tag="PCH" data-page-node-id="bZlFdREHFted267v0xyoc4">
-        <div class="pub-meta" data-page-node-id="Mg7IJbOos3G4QJSwchFrsm">
-          <span class="tag tag-PCH" data-page-node-id="MHeqiiDzJGoXh4vPjEvGMx">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="CNzRatfIw7jz0ht2hJMReI">口头 · 长摘要</span>
-        </div>
-        <div data-page-node-id="pgKCYwpbCJQR79YOHUD09D">
-          <p class="pub-title" data-page-node-id="FNVEfnAS4Nvwe3J7aM739V">Electrokinetic multiphase flow at spontaneously charged liquid-liquid interface: A diffuse interface model with adsorption-induced interface charge</p>
-          <p class="pub-authors" data-page-node-id="3JuKU1Xg7EJCoqqHJrV6Ga"><b data-page-node-id="GEW7jtJnJVMjUM0BIiTeWG">Y.F. Huang</b>, W. Liu, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="WPVnG1FK9zUp0uKHBZCaX5">ICTAM 2024 · 大邱，韩国 · 2024·08</p>
-        </div>
-        <div class="pub-year" data-page-node-id="YRnfq7qDV2oHcWJjjbUmal">2024</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH" data-page-node-id="0p90KHBZo3Vxb5nGVRrBfH">
-        <div class="pub-meta" data-page-node-id="YBQ7hQlCQVHKzgxRA0JmzS">
-          <span class="tag tag-PCH" data-page-node-id="zdHKOy2mctyKJMvgFbVgQn">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="DWJVrszqcLo7IHfI88CAUt">口头</span>
-        </div>
-        <div data-page-node-id="kR9HmQat5iehn1aAivgaJK">
-          <p class="pub-title" data-page-node-id="GG2UXcrE4qEVjCJNsasfsD">Measurement of surface charge at immiscible liquid-liquid interface using streaming-potential-on-microfluidics</p>
-          <p class="pub-authors" data-page-node-id="GxA4kOYyiET1IxU1XfWKF2"><b data-page-node-id="onfO8rEAic98nm8maXywEM">Y.F. Huang</b>, A. Alizadeh, F.L. Liu, M. Wang*</p>
-          <p class="pub-journal" data-page-node-id="JJ85qBYHAJU5mLFVltxW8b">InterPore 2023 · 爱丁堡，英国 · 2023·05</p>
-        </div>
-        <div class="pub-year" data-page-node-id="PZQTlwAZeAanuVRaMNIdo1">2023</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH" data-page-node-id="Oc8MhHfmN55LNAWDz1lM2d">
-        <div class="pub-meta" data-page-node-id="RDTRDxgkaCGCmLv2dmb1Pa">
-          <span class="tag tag-PCH" data-page-node-id="5CQ7ZUllAcdNN9xEnyvPoT">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="9m0D3alZMnwkEjhXJX89xk">口头 · 接收</span>
-          <span class="tag tag-cn" data-page-node-id="W5yKyHTreWExwRaZb8PtY0">中文</span>
-        </div>
-        <div data-page-node-id="OkU3gQlmnrEJlui7hYGphP">
-          <p class="pub-title" data-page-node-id="QagoMwIITfE3RcYUnI8rNo">高表面带电量介电液滴电泳的离子浓度极化效应研究</p>
-          <p class="pub-authors" data-page-node-id="e5Xh9IB2AkqbXysH3veJnc"><b data-page-node-id="6CqlorgaYl0ioSWvP5MZl1">黄云帆</b>，王沫然*</p>
-          <p class="pub-journal" data-page-node-id="ZTko6ZcE0dJ5dBV6MuapXL">中国力学大会-2025 · 长沙，中国 · 2025·08. <i data-page-node-id="saO06BWuPYJR1REeXClMBd">已接收</i></p>
-        </div>
-        <div class="pub-year" data-page-node-id="bPeb9XsddqZcqesMQg1eWy">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH" data-page-node-id="2ogUCZaXVfOHm5XgMctuct">
-        <div class="pub-meta" data-page-node-id="72bBRS0dJpxgVkKAGbiKyq">
-          <span class="tag tag-PCH" data-page-node-id="Rs6c4BkaCurh7L9A7EkjGd">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="E70d128jVyZwt9wXlx2UVO">口头</span>
-          <span class="tag tag-cn" data-page-node-id="WLHoSmhSpu1KvOXgQIPlCc">中文</span>
-        </div>
-        <div data-page-node-id="mZpgZ5UNt6BaYdYtHRnQxn">
-          <p class="pub-title" data-page-node-id="Ntl5ReWgC6hl2qNspziuk3">基于流动电势的液液界面电荷密度测量方法</p>
-          <p class="pub-authors" data-page-node-id="UG4xPDEGCEz73URc31bsqu"><b data-page-node-id="sgGImSISBdrUc58waflhWR">黄云帆</b>，王沫然*</p>
-          <p class="pub-journal" data-page-node-id="N33Xxb5JvPJ3yfMPdsLhT7">第十二届全国流体力学学术会议 · 西安，中国 · 2022·11</p>
-        </div>
-        <div class="pub-year" data-page-node-id="2m5ivQPgNmpV5guHVCdsM1">2022</div>
-      </article>
-
-      <article class="pub-card" data-tag="QH" data-page-node-id="P7ENZNliAiuPD32TwCKx8p">
-        <div class="pub-meta" data-page-node-id="XiqaI6nFYEPXMBiEe9eCZ4">
-          <span class="tag tag-QH" data-page-node-id="LKJ9MyKWMIIu1OJ2gBruBp">QH</span>
-          <span class="tag tag-extra" data-page-node-id="1hppemANtNhfrEqA98jcjC">口头 · 论文</span>
-          <span class="tag tag-cn" data-page-node-id="srDbVVmNIYZbkYN5UsEODp">中文</span>
-        </div>
-        <div data-page-node-id="TdwKq3h9JrA4tlSZAmgiwB">
-          <p class="pub-title" data-page-node-id="SlbKmrrqldVHA2Bi4P9ebB">微纳尺度低维电子输运的水动力学研究</p>
-          <p class="pub-authors" data-page-node-id="zutjFzLclv3azV5rKRgRxy"><b data-page-node-id="WcaBrKoNAqiAlhsn2pLD6J">黄云帆</b>，王沫然*</p>
-          <p class="pub-journal" data-page-node-id="INnFrWtkERRbe6JV9DSV7U">中国力学大会-2019 · 杭州，中国 · 2019·08</p>
-        </div>
-        <div class="pub-year" data-page-node-id="KpAAwS44NybLGd7VM1ZwlZ">2019</div>
-      </article>
-    </div>
-
-    <h3 class="subsection-title" data-page-node-id="S8q5chL99oHcuXen4wTVim">专利软著</h3>
-    <div class="pub-list" data-page-node-id="VHKmUqnCbL6kdi85aYYCDU">
-      <article class="pub-card" data-tag="PCH" data-page-node-id="qfz2ajISyxlWGspBA4kA1b">
-        <div class="pub-meta" data-page-node-id="AOHs7B59wSLM1oi8aXK3Dv">
-          <span class="tag tag-PCH" data-page-node-id="BAU5WCCrCIgtwctZNOWCI8">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="jTtOeIkoou7CYBcHfcm18V">发明专利</span>
-        </div>
-        <div data-page-node-id="q3q0D2tFJs5Z6IZzBAbBA2">
-          <p class="pub-title" data-page-node-id="zF0DBKEB7RGyj5wQXH0ssU">一种不混溶液体界面电荷密度原位测量方法、装置和系统</p>
-          <p class="pub-authors" data-page-node-id="pkTSjaGcgatKmM6qvGvNu6">王沫然，黄云帆*</p>
-          <p class="pub-journal" data-page-node-id="CwLznPXHaL4h3JVZ0IxlZ8">CN 118707295 B · 授权公告日：2025-09-02</p>
-        </div>
-        <div class="pub-year" data-page-node-id="OSqZpMs31s8gJ1cVNWG6ZF">2025</div>
-      </article>
-
-      <article class="pub-card" data-tag="PCH" data-page-node-id="TPxDU1UaxFGjGBw3OGCU7R">
-        <div class="pub-meta" data-page-node-id="R5MVtlXAMHSlUQhgffqE2S">
-          <span class="tag tag-PCH" data-page-node-id="bErnZp4VE7uXR8jmpNGGzD">PCH</span>
-          <span class="tag tag-extra" data-page-node-id="lD3dtEbO7CPrGjj7ojWIX6">发明专利</span>
-        </div>
-        <div data-page-node-id="pPsVHoMwL0dMU8fFAnhEq9">
-          <p class="pub-title" data-page-node-id="UejsJKrw6JAA3Hgu0tk1dz">一种测量液液界面电荷密度的方法及装置</p>
-          <p class="pub-authors" data-page-node-id="ZPtzfcTNOmLgsKhTmllsuz">王沫然，黄云帆，刘凡犁*</p>
-          <p class="pub-journal" data-page-node-id="GiUBd8DCM1Y4aE6xgJNDme">CN 114216950 B · 授权公告日：2024-04-12</p>
-        </div>
-        <div class="pub-year" data-page-node-id="ECPlC1XgRCpkiFefYOYkaN">2024</div>
-      </article>
-
-      <article class="pub-card" data-tag="MS" data-page-node-id="WHAjw5ceKEH3GsaPnUdGtQ">
-        <div class="pub-meta" data-page-node-id="omSxCgCrEkutAy3f7FMUQD">
-          <span class="tag tag-MS" data-page-node-id="FdHsjSYm7Tzu7lZ33oAHYA">MS</span>
-          <span class="tag tag-extra" data-page-node-id="ta4y92cfKeF4CUZENgtumT">软件著作权</span>
-        </div>
-        <div data-page-node-id="YvK9kVXMYe21pw9tlDhUEM">
-          <p class="pub-title" data-page-node-id="Jo4KfTemAMxVbBrs0MiQNt">多物理多相多尺度流动模拟软件 (μ<sup data-page-node-id="AHcAFYK8p7Mt5lY4hnaFSQ">3</sup>–FLOWS) V1.0</p>
-          <p class="pub-authors" data-page-node-id="LDecj8HueyYGRRAr8rO56D">王沫然，杨光，陈航宇，黄云帆</p>
-          <p class="pub-journal" data-page-node-id="6GiXi0rzmFKPqcYCIj5fBj">登记号：2024SR0160474</p>
-        </div>
-        <div class="pub-year" data-page-node-id="cTJvT3kBNL1owN4xDbu4Sd">2024</div>
-      </article>
-    </div>
-  </section>
-
 </main>
 
-<footer class="site-footer" data-page-node-id="5DFbkpD0l5dKgU2yyYoJOM">
-  <div class="container" data-page-node-id="cYEfNios9sOA8SuQidjG0f">
-    <div class="stats-row" data-page-node-id="a9SB0zTyRVmnwLXmzyc3hT">
-      <span data-page-node-id="Vwbxk5XVTCFEciPycAY2Dy"><span class="idx" data-page-node-id="cFFoka07xRrSIXhiceqamj">总访问量</span><span id="vercount_value_site_pv" data-page-node-id="kYIuqKrfCNyKqOFbAQA2o7">···</span></span>
-      <span data-page-node-id="fPEqSD4kFNLyiRzo4p5fl4"><span class="idx" data-page-node-id="GmidtpcYonrkC33Xb2C0M0">总访客数</span><span id="vercount_value_site_uv" data-page-node-id="6zVfAjTKhDzYdEvrDrS2I7">···</span></span>
+<footer class="site-footer" data-page-node-id="footer">
+  <div class="container">
+    <div class="stats-row">
+      <span><span class="idx">总访问量</span><span id="vercount_value_site_pv">···</span></span>
+      <span><span class="idx">总访客数</span><span id="vercount_value_site_uv">···</span></span>
       <span class="stats-since">Since Sep 1st, 2026</span>
     </div>
-    <div class="copyright" data-page-node-id="DZGHbclfbmAK19Ul0Ec64U">
-      © <span id="year" data-page-node-id="E7j7IUuBC2c7E9adU0pWXy"></span> 黄云帆 · 最后更新：2026 年 9 月 · 托管于 GitHub Pages</div>
+    <div class="copyright">
+      © <span id="year"></span> 黄云帆 · 最后更新：2026 年 9 月 · 托管于 GitHub Pages</div>
   </div>
 </footer>
 
-<a href="#top" class="back-to-top" id="backToTop" aria-label="回到顶部" data-page-node-id="qU0O0HFtSD8qtXatOwtmF2">↑</a>
+<a href="#top" class="back-to-top" id="backToTop" aria-label="回到顶部">↑</a>
 
 <script defer src="https://cn.vercount.one/js"></script>
 <script>
 (function () {
-  // ---- Publication filtering ----
-  var btns = document.querySelectorAll('.filter-btn');
-  var cards = document.querySelectorAll('.pub-card');
-  btns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var filter = btn.getAttribute('data-filter');
-      btns.forEach(function (b) { b.classList.toggle('active', b === btn); });
-      cards.forEach(function (card) {
-        var tags = (card.getAttribute('data-tag') || '').split(/\s+/);
-        card.classList.toggle('hidden', !(filter === 'all' || tags.indexOf(filter) !== -1));
-      });
-    });
-  });
 
   // ---- Back to top ----
   var back = document.getElementById('backToTop');
